@@ -1,0 +1,5 @@
+﻿#,ID,Name,Cost,Description,Attack,Defend
+attack,0,攻擊,1,造成4點傷害,4,none
+attack,1,重攻擊,2,造成7點傷害,7,none
+defend,2,防禦,1,施加4點防禦,none,4
+defend,3,完全防禦,2,施加7點防禦,none,7

@@ -1,0 +1,20 @@
+﻿<Properties StartupConfiguration="{6CA85496-1C88-B641-9BF3-593E2106F492}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Data/CardListData.csv">
+    <Files>
+      <File FileName="Assets/Scripts/Card.cs" Line="52" Column="31" />
+      <File FileName="Assets/Scripts/CardDisplay.cs" Line="30" Column="1" />
+      <File FileName="Assets/Scripts/CardStore.cs" Line="78" Column="2" />
+      <File FileName="../CardGame_01/Cardgame_1/Assets/Data/playerData.csv" Line="14" Column="9" />
+      <File FileName="Assets/Scripts/PlayerDeckStore.cs" Line="33" Column="44" />
+      <File FileName="Assets/Scripts/DeckManager.cs" Line="51" Column="1" />
+      <File FileName="Assets/Data/CardListData.csv" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c6418487-a54b-4292-bb98-ee40d5aa170e" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
