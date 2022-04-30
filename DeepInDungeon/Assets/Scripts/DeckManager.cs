@@ -12,7 +12,7 @@ public class DeckManager : MonoBehaviour
     public Transform deckPanel;
     public GameObject CardPrefab;
 
-    private Dictionary<int, GameObject> deckDic = new Dictionary<int, GameObject>();
+    //private Dictionary<int, GameObject> deckDic = new Dictionary<int, GameObject>();
     void Start()
     {
         playerDeckStore = DataManager.GetComponent<PlayerDeckStore>();
@@ -27,27 +27,23 @@ public class DeckManager : MonoBehaviour
         
     }
 
-    public void CreateCard(int _id)//如果要同卡分不同張，要額外設計
+    public void CreateDeckCard(int _index)//同卡分不同張
     {
 
         GameObject newCard = GameObject.Instantiate(CardPrefab, new Vector3(0, 0, 0), Quaternion.identity);
         newCard.transform.SetParent(deckPanel, false);
-
+        int id = playerDeckStore.PlayerDeckCards[_index];
         //newCard.GetComponent<CardCounter>().SetCounter(refData[_id]);
-        newCard.GetComponent<CardDisplay>().card = cardStore.CardList[_id];
+        newCard.GetComponent<CardDisplay>().card = cardStore.CardList[id];
 
-        deckDic.Add(_id, newCard);
+        //deckDic.Add(id, newCard);
     }
 
     public void UpdateDeck()
     {
-        for (int i = 0; i < playerDeckStore.PlayerDeckCards.Length; i++)
+        for (int i = 0; i < playerDeckStore.PlayerDeckCards.Count; i++)
         {
-            if (playerDeckStore.PlayerDeckCards[i] > 0)
-            {
-                CreateCard(i);
-            }
-
+            CreateDeckCard(i);
 
         }
     }

@@ -9,7 +9,7 @@ public class PlayerDeckStore : MonoBehaviour
 
     
      //PlayerCards[i]代表索引值i有多少張牌
-    public int[] PlayerDeckCards;
+    public List<int> PlayerDeckCards = new List<int>();//用list才能改變串列長度
 
     public TextAsset playerDeck;
     //之後可能會有不同的玩家資料
@@ -31,7 +31,7 @@ public class PlayerDeckStore : MonoBehaviour
     public void LoadPlayerDeck()
     {
 
-        PlayerDeckCards = new int[CardStore.CardList.Count];
+        //PlayerDeckCards = new int[];
         
 
         string[] dataRow = playerDeck.text.Split('\n');//用換行來確定第幾列
@@ -46,12 +46,16 @@ public class PlayerDeckStore : MonoBehaviour
 
             else if (rowArray[0] == "deck")//載入卡組
             {
-                int ID = int.Parse(rowArray[1]);
-                int num = int.Parse(rowArray[2]);
+                int index = int.Parse(rowArray[1]);
+                int ID = int.Parse(rowArray[2]);
 
-                PlayerDeckCards[ID] = num;
+                //PlayerDeckCards[index] = ID;
+                PlayerDeckCards.Add(ID);
             }
-
+            else
+            {
+                return;
+            }
         }
     }
 
@@ -62,12 +66,12 @@ public class PlayerDeckStore : MonoBehaviour
 
         List<string> datas = new List<string>();
         
-        datas.Add("#");
+        datas.Add("#,index,ID");
 
        
 
         //保存玩家卡組
-        for (int i = 0; i < PlayerDeckCards.Length; i++)
+        for (int i = 0; i < PlayerDeckCards.Count; i++)
         {
             if (PlayerDeckCards[i] != 0)
             {

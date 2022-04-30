@@ -57,6 +57,10 @@ public class CardStore : MonoBehaviour
 
                 
             }
+            else
+            {
+                return;//沒有就結束了
+            }
         }
 
     }

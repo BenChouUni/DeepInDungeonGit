@@ -407,3 +407,7 @@
 /Users/apple/Desktop/unity/CardGame/DeepInDungeon/obj/Debug/Assembly-CSharp.csproj.CopyComplete
 /Users/apple/Desktop/unity/CardGame/DeepInDungeon/obj/Debug/Assembly-CSharp.dll
 /Users/apple/Desktop/unity/CardGame/DeepInDungeon/obj/Debug/Assembly-CSharp.pdb
+/Users/mac/Desktop/Unity/DeepInDungeonGit/DeepInDungeon/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache
+/Users/mac/Desktop/Unity/DeepInDungeonGit/DeepInDungeon/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache
+/Users/mac/Desktop/Unity/DeepInDungeonGit/DeepInDungeon/obj/Debug/Assembly-CSharp.dll
+/Users/mac/Desktop/Unity/DeepInDungeonGit/DeepInDungeon/obj/Debug/Assembly-CSharp.pdb
