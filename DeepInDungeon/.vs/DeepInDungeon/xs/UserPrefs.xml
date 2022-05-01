@@ -1,26 +1,30 @@
 ﻿<Properties StartupConfiguration="{6CA85496-1C88-B641-9BF3-593E2106F492}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CardDisplay.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ZoomCard.cs">
     <Files>
       <File FileName="Assets/Scripts/Card.cs" Line="52" Column="31" />
-      <File FileName="Assets/Scripts/CardDisplay.cs" Line="4" Column="19" />
+      <File FileName="Assets/Scripts/CardDisplay.cs" />
       <File FileName="Assets/Scripts/CardStore.cs" />
       <File FileName="Assets/Scripts/PlayerDeckStore.cs" />
       <File FileName="Assets/Scripts/DeckManager.cs" />
       <File FileName="Assets/Data/CardListData.csv" />
       <File FileName="Assets/Data/PlayerDeck.csv" />
-      <File FileName="Assets/Scripts/NewBehaviourScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ZoomCard.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="DeepInDungeon" expanded="True" selected="True" />
+          <Node name="DeepInDungeon" expanded="True">
+            <Node name="Assets" expanded="True" selected="True">
+              <Node name="Scripts" expanded="True" />
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c0c7fe88-8f58-4e94-80c5-a2e68715f99e" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f5522421-2609-4850-9419-ef2d6610087d" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

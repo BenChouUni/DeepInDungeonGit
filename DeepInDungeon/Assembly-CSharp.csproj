@@ -58,7 +58,7 @@
     <Compile Include="Assets/Scripts/PlayerDeckStore.cs" />
     <Compile Include="Assets/Scripts/DeckManager.cs" />
     <Compile Include="Assets/Scripts/CardStore.cs" />
-    <Compile Include="Assets/Scripts/NewBehaviourScript.cs" />
+    <Compile Include="Assets/Scripts/ZoomUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
