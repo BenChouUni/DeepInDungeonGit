@@ -17,6 +17,7 @@ public class PlayerDeckStore : MonoBehaviour
     void Awake()
     {
         DataLoad();
+        Debug.Log(Application.dataPath);
     }
 
     // Update is called once per frame
@@ -62,7 +63,7 @@ public class PlayerDeckStore : MonoBehaviour
     public void SavePlayerDeck()
     {
         string path = Application.dataPath + "/Data/PlayerDeck.csv"; //路徑名稱，務必確認
-
+        Debug.Log("進行玩家資料儲存");
 
         List<string> datas = new List<string>();
         
@@ -76,9 +77,12 @@ public class PlayerDeckStore : MonoBehaviour
             if (PlayerDeckCards[i] != 0)
             {
                 datas.Add("deck," + i.ToString() + "," + PlayerDeckCards[i].ToString());
+                Debug.Log("deck," + i.ToString() + "," + PlayerDeckCards[i].ToString());
             }
 
         }
         File.WriteAllLines(path, datas);
+        
+        
     }
 }

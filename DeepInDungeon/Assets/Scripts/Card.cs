@@ -8,6 +8,7 @@ public class Card
     public string cardName;
     public string cardDiscription;
     public int cost;
+    
 
     public Card(int _id, string _cardName,string _discription,int _cost)
     {
@@ -15,6 +16,7 @@ public class Card
         this.cardName = _cardName;
         this.cost = _cost;
         this.cardDiscription = _discription;
+        
     }
 }
 
@@ -46,7 +48,7 @@ public class WeaponCard : Card//武器卡
     public int attack;
     public int defend;
 
-    public WeaponCard(int _id, string _cardName, string _discription, int _cost, int _attack, int _defend):base(_id, _cardName, _discription, _cost)
+    public WeaponCard(int _id, string _cardName, string _discription, int _cost, int _attack, int _defend) :base(_id, _cardName, _discription, _cost)
     {
         this.attack = _attack;
         this.defend = _defend;
