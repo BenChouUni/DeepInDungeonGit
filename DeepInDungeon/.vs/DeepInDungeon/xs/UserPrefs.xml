@@ -1,21 +1,28 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/RewardCard.cs">
+﻿<Properties StartupConfiguration="{6CA85496-1C88-B641-9BF3-593E2106F492}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Card.cs">
     <Files>
-      <File FileName="Assets/Scripts/Card.cs" Line="44" Column="2" />
-      <File FileName="Assets/Scripts/CardDisplay.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/CardStore.cs" Line="8" Column="31" />
-      <File FileName="Assets/Scripts/PlayerDeckStore.cs" Line="80" Column="87" />
-      <File FileName="Assets/Scripts/DeckManager.cs" Line="40" Column="6" />
-      <File FileName="Assets/Data/CardListData.csv" Line="1" Column="1" />
-      <File FileName="Assets/Data/PlayerDeck.csv" Line="10" Column="1" />
-      <File FileName="Assets/Scripts/ScrollManager.cs" Line="17" Column="42" />
-      <File FileName="Assets/Scripts/RewardManager.cs" Line="20" Column="22" />
-      <File FileName="Assets/Scripts/RewardCard.cs" Line="29" Column="42" />
+      <File FileName="Assets/Scripts/Card.cs" Line="10" Column="21" />
+      <File FileName="Assets/Scripts/CardDisplay.cs" />
+      <File FileName="Assets/Scripts/CardStore.cs" />
+      <File FileName="Assets/Scripts/PlayerDeckStore.cs" />
+      <File FileName="Assets/Scripts/DeckManager.cs" />
+      <File FileName="Assets/Data/CardListData.csv" />
+      <File FileName="Assets/Data/PlayerDeck.csv" />
+      <File FileName="Assets/Scripts/ScrollManager.cs" />
+      <File FileName="Assets/Scripts/RewardManager.cs" />
+      <File FileName="Assets/Scripts/RewardCard.cs" />
+      <File FileName="Assets/Scripts/ZoomUI.cs" />
+      <File FileName="Assets/Scripts/Weapon.cs" />
+      <File FileName="Assets/Scripts/WeaponDisplay.cs" />
+      <File FileName="Assets/Scripts/WeaponDeckManager.cs" />
+      <File FileName="Assets/Scripts/StatusClass.cs" />
+      <File FileName="Assets/Scripts/Enemy.cs" />
+      <File FileName="Assets/Scripts/Part.cs" Line="7" Column="11" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d11934ce-e092-4e9c-856d-9bf5e06446a3" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="bf199357-6fe3-4da9-8074-0fa2172c79a0" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

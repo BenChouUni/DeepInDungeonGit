@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class ZoomUI : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
 {
-    public float zoomSize = 1.2f;
+    public float zoomSize = 1.5f;
 
     public void OnPointerEnter(PointerEventData pointerEvent)
     {
