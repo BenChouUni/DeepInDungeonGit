@@ -10,13 +10,16 @@ public class WeaponDeckManager : MonoBehaviour
     public Transform weaponDeck;
     public GameObject weaponPrefab;
 
+    
     private void Awake()
     {
         LoadWeaponData();
     }
     private void Start()
     {
-        Debug.Log(WeaponList.Count);
+        TestHand("main");
+        TestHand("sec");
+        TestHand("two");
         CreateAllWeaponDeck();
         
     }
@@ -40,9 +43,15 @@ public class WeaponDeckManager : MonoBehaviour
                 int def = int.Parse(rowArray[3]);
                 int slot = int.Parse(rowArray[4]);
                 string describtion = rowArray[5];
+                Debug.Log(rowArray[6]);
+                string s = rowArray[6];
 
 
-                Weapon weapon = new Weapon(id, name, atk, def, slot, describtion);
+
+                Hand hand = CheckHandByString(s);
+
+                
+                Weapon weapon = new Weapon(id, name, atk, def, slot, describtion,hand);
 
                 WeaponList.Add(weapon);
 
@@ -50,6 +59,52 @@ public class WeaponDeckManager : MonoBehaviour
             }
 
             
+        }
+    }
+
+    public static Hand CheckHandByString(string str)
+    {/*
+        switch (str)
+        {
+            case "main":
+                Debug.Log("主要");
+                return Hand.Main;
+                
+            case "sec":
+                Debug.Log("副手");
+                return Hand.Secondary;
+                
+            case "two":
+                Debug.Log("雙手");
+                return Hand.TwoHanded;
+                
+
+            default:
+                Debug.Log("空");
+                return Hand.Empty;
+                
+                
+        }
+        */
+        if (str == "main")
+        {
+            Debug.Log("主要");
+            return Hand.Main;
+        }
+        else if (str == "sec")
+        {
+            Debug.Log("副手");
+            return Hand.Secondary;
+        }
+        else if (str == "two")
+        {
+            Debug.Log("雙手");
+            return Hand.TwoHanded;
+        }
+        else
+        {
+            Debug.Log("錯誤字串" + str);
+            return Hand.Empty;
         }
     }
 
@@ -70,6 +125,12 @@ public class WeaponDeckManager : MonoBehaviour
         {
             CreateWeapon(i);
         }
+    }
+
+    private void TestHand(string str)
+    {
+        string a = CheckHandByString(str).ToString();
+        Debug.Log(a);
     }
 
 }
