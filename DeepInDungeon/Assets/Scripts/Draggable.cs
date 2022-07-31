@@ -14,7 +14,13 @@ public class Draggable : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDragHa
     {
         get { return startParent; }
     }
-    
+    public GameObject canvas;
+
+    private void Awake()
+    {
+        canvas = GameObject.Find("Canvas").gameObject;
+    }
+
 
     public Transform parentReturnTo = null;//要返回的位置的parent
  
@@ -23,8 +29,13 @@ public class Draggable : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDragHa
     {
         startParent = this.transform.parent;
         parentReturnTo = startParent;
-        Debug.Log("開始拖"+gameObject.name.ToString());
-        this.transform.SetParent(this.transform.parent.parent.parent);
+        
+
+        //拖動時移到canvas底下
+        this.transform.SetParent(canvas.transform);
+
+        //關閉Raycast Block
+        TurnRaycastBlock(false);
     }
 
 
@@ -37,10 +48,18 @@ public class Draggable : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDragHa
     public void OnEndDrag(PointerEventData eventData)
     {
         this.transform.SetParent(parentReturnTo);
+
+        //重新打開raycast的影響
+        TurnRaycastBlock(true);
     }
 
     public void ReturnToStartParent()
     {
         this.transform.SetParent(startParent);
+    }
+
+    private void TurnRaycastBlock(bool value)
+    {
+        this.GetComponent<CanvasGroup>().blocksRaycasts = value;
     }
 }

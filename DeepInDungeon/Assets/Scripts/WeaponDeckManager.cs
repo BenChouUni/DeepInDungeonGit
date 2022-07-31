@@ -10,16 +10,19 @@ public class WeaponDeckManager : MonoBehaviour
     public Transform weaponDeck;
     public GameObject weaponPrefab;
 
-    
+    //武器擺放空間
+    public WeaponDropZone mainWeaponZone;
+    public WeaponDropZone secondaryWeaponZone;
+
     private void Awake()
     {
+        initialWeaponZone();
         LoadWeaponData();
     }
+
     private void Start()
     {
-        TestHand("main");
-        TestHand("sec");
-        TestHand("two");
+    
         CreateAllWeaponDeck();
         
     }
@@ -43,8 +46,8 @@ public class WeaponDeckManager : MonoBehaviour
                 int def = int.Parse(rowArray[3]);
                 int slot = int.Parse(rowArray[4]);
                 string describtion = rowArray[5];
-                Debug.Log(rowArray[6]);
-                string s = rowArray[6];
+                //Debug.Log(rowArray[6]+"有"+ rowArray[6].Length+"長度");
+                string s = rowArray[6].Trim();
 
 
 
@@ -63,49 +66,31 @@ public class WeaponDeckManager : MonoBehaviour
     }
 
     public static Hand CheckHandByString(string str)
-    {/*
+    {
+
+        
         switch (str)
         {
             case "main":
-                Debug.Log("主要");
+                //Debug.Log("主要");
                 return Hand.Main;
                 
             case "sec":
-                Debug.Log("副手");
+                //Debug.Log("副手");
                 return Hand.Secondary;
                 
             case "two":
-                Debug.Log("雙手");
+                //Debug.Log("雙手");
                 return Hand.TwoHanded;
                 
 
             default:
-                Debug.Log("空");
+                //Debug.Log("空");
                 return Hand.Empty;
                 
                 
         }
-        */
-        if (str == "main")
-        {
-            Debug.Log("主要");
-            return Hand.Main;
-        }
-        else if (str == "sec")
-        {
-            Debug.Log("副手");
-            return Hand.Secondary;
-        }
-        else if (str == "two")
-        {
-            Debug.Log("雙手");
-            return Hand.TwoHanded;
-        }
-        else
-        {
-            Debug.Log("錯誤字串" + str);
-            return Hand.Empty;
-        }
+
     }
 
     public void CreateWeapon(int _id)//同卡分不同張
@@ -127,10 +112,11 @@ public class WeaponDeckManager : MonoBehaviour
         }
     }
 
-    private void TestHand(string str)
+    public void initialWeaponZone()
     {
-        string a = CheckHandByString(str).ToString();
-        Debug.Log(a);
+        mainWeaponZone.hand = Hand.Main;
+        secondaryWeaponZone.hand = Hand.Secondary;
     }
+ 
 
 }
