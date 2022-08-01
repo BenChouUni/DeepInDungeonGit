@@ -8,15 +8,20 @@ public class WeaponDropZone : DropZone, IDropHandler
 {
     public Hand hand = Hand.Empty;//由外部管理器決定此物件是哪個
 
+    public WeaponDeckManager wdManager;
+
+    public Weapon weaponOn { get; set; }
+
     public void OnDrop(PointerEventData eventData)
     {
-        if (hand == Hand.Empty)
+        if (hand == Hand.Empty || hand == Hand.TwoHanded)
         {
             Debug.Log("這空間未被認為是哪種手");
+            return;
         }
 
-
         GameObject dropInStuff = eventData.pointerDrag;
+
         if (dropInStuff.GetComponent<WeaponDisplay>()!=null)//確定進來的是武器
         {
             if (CheckHand(dropInStuff.GetComponent<WeaponDisplay>()) == false)
@@ -34,6 +39,7 @@ public class WeaponDropZone : DropZone, IDropHandler
             }
 
             DropIn(dropInStuff);
+            TellWeaponType();
             
         }
         
@@ -59,10 +65,26 @@ public class WeaponDropZone : DropZone, IDropHandler
 
     public Weapon WeaponOnZone()
     {
-       WeaponDisplay weaondisplay = ZoneList[0].GetComponent<WeaponDisplay>();
-        
-        return weaondisplay.weapon;
-       
+        Weapon we = ZoneList[0].GetComponent<WeaponDisplay>().weapon;
+
+        return we;
+
     }
 
+    /// <summary>
+    /// 告訴控制器傳入這個Dropzone的weapon
+    /// </summary>
+    private void TellWeaponType()
+    {
+        if (hand == Hand.Main)
+        {
+            
+           
+            wdManager.MainWeapon = WeaponOnZone();
+        }
+        else if (hand == Hand.Secondary)
+        {
+            wdManager.SecondaryWeapon = WeaponOnZone();
+        }
+    }
 }

@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class CardDisplay : MonoBehaviour
 {
     public Text nameText;
-    public Text costText;
     
     public Text discriptiontText;
 
@@ -14,28 +13,19 @@ public class CardDisplay : MonoBehaviour
 
     public Card card;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        ShowCard();
-    }
 
     public void ShowCard()
     {
 
 
-        nameText.text = card.cardName;
-        costText.text = card.cost.ToString();//數字換成文字
-        discriptiontText.text = card.cardDiscription;
-
-        if (card is AttackCard)
+        nameText.text = this.card.name;
+       
+        if (discriptiontText.text!=null)
         {
+            discriptiontText.text = card.cardDescription;
+        }
+        
 
-            
-        }
-        else if (card is DefendCard)
-        {
-            
-        }
+
     }
 }

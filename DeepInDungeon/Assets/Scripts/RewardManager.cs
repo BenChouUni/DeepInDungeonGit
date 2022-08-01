@@ -9,7 +9,7 @@ public class RewardManager : MonoBehaviour
 
     public GameObject DataManager;
     private PlayerDeckStore playerDeckStore;
-    private CardStore cardStore;
+    private MovesCardStore cardStore;
 
     //public int[] randomIDs;
 
@@ -17,7 +17,7 @@ public class RewardManager : MonoBehaviour
     void Start()
     {
         playerDeckStore = DataManager.GetComponent<PlayerDeckStore>();
-        cardStore = DataManager.GetComponent<CardStore>();
+        cardStore = DataManager.GetComponent<MovesCardStore>();
         
 
         DrawThreeRandomCards();
@@ -41,10 +41,10 @@ public class RewardManager : MonoBehaviour
 
     public int[] RandomNonUpgradedID(int _number)//要幾個ID
     {
-        int count = cardStore.CardList.Count/2;//總清單有多少種牌，沒升級的牌只有一半
-        int[] sequence = new int[cardStore.CardList.Count];
+        int count = cardStore.MovesList.Count/2;//總清單有多少種牌，沒升級的牌只有一半
+        int[] sequence = new int[cardStore.MovesList.Count];
         int[] output = new int[_number];
-        for (int i = 0; i < cardStore.CardList.Count; i++)
+        for (int i = 0; i < cardStore.MovesList.Count; i++)
         {
             sequence[i] = i;
         }
@@ -73,7 +73,7 @@ public class RewardManager : MonoBehaviour
             newCard.transform.SetParent(cardsArea, false);
             int id = _ids[i];
             
-            newCard.GetComponent<CardDisplay>().card = cardStore.CardList[id];
+            newCard.GetComponent<CardDisplay>().card = cardStore.MovesList[id];
         }
         
 

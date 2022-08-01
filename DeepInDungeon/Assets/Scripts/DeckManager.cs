@@ -7,7 +7,7 @@ public class DeckManager : MonoBehaviour
     public GameObject DataManager;
 
     private PlayerDeckStore playerDeckStore;
-    private CardStore cardStore;
+    private MovesCardStore cardStore;
 
     public Transform deckPanel;
     public GameObject CardPrefab;
@@ -16,7 +16,7 @@ public class DeckManager : MonoBehaviour
     void Start()
     {
         playerDeckStore = DataManager.GetComponent<PlayerDeckStore>();
-        cardStore = DataManager.GetComponent<CardStore>();
+        cardStore = DataManager.GetComponent<MovesCardStore>();
 
         UpdateDeck();
     }
@@ -34,7 +34,7 @@ public class DeckManager : MonoBehaviour
         newCard.transform.SetParent(deckPanel, false);
         int id = playerDeckStore.PlayerDeckCards[_index];
         //newCard.GetComponent<CardCounter>().SetCounter(refData[_id]);
-        newCard.GetComponent<CardDisplay>().card = cardStore.CardList[id];
+        newCard.GetComponent<CardDisplay>().card = cardStore.MovesList[id];
 
         //deckDic.Add(id, newCard);
     }
@@ -47,4 +47,6 @@ public class DeckManager : MonoBehaviour
 
         }
     }
+
+
 }

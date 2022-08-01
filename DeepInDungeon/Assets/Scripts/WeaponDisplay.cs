@@ -3,22 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WeaponDisplay : MonoBehaviour
+public class WeaponDisplay : CardDisplay
 {
-    public Image bg;
-    public Text nameText;
+    public Image bg;//背景，用來改顏色
+    //public Text nameText;
     public Text atkText;
     public Text defText;
 
     public List<GameObject> slots = new List<GameObject>();
 
-    public Text discriptiontText;
-
-    public Image Image;
 
     public Weapon weapon;
 
-    
+    private void Awake()
+    {
+        
+    }
+
 
     // Start is called before the first frame update
     void Start()
@@ -29,13 +30,15 @@ public class WeaponDisplay : MonoBehaviour
    
     public void ShowWeapon()
     {
-        
+        card = weapon;
+        ShowCard();
 
-        nameText.text = weapon.name;
+
+        //nameText.text = weapon.name;
         atkText.text = weapon.Attack.ToString();
         defText.text = weapon.Defense.ToString();
-        discriptiontText.text = weapon.weaponDescribtion;
-
+        //discriptiontText.text = weapon.cardDescription;
+        
         BgColorChange(weapon.WeaponHand);
         for (int i = 0; i < weapon.slotNumber; i++)
         {

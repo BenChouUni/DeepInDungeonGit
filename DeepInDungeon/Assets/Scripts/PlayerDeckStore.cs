@@ -5,7 +5,7 @@ using System.IO;
 
 public class PlayerDeckStore : MonoBehaviour
 {
-    public CardStore CardStore;
+    public MovesCardStore CardStore;
 
     
      //PlayerCards[i]代表索引值i有多少張牌
@@ -14,17 +14,11 @@ public class PlayerDeckStore : MonoBehaviour
     public TextAsset playerDeck;
     //之後可能會有不同的玩家資料
 
-    void Awake()
-    {
-        DataLoad();
-        Debug.Log(Application.dataPath);
-    }
-
     // Update is called once per frame
     public void DataLoad()
     {
-        CardStore.LoadCardData();//先將卡牌資料庫存到CardList才能調用LoadPLayerData
-        CardStore.TestLoad();
+        //CardStore.LoadMovesData();//先將卡牌資料庫存到CardList才能調用LoadPLayerData
+        //CardStore.TestLoad();
         LoadPlayerDeck();
         
     }

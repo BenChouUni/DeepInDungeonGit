@@ -56,7 +56,7 @@
     <Compile Include="Assets/Scripts/Draggable.cs" />
     <Compile Include="Assets/Scripts/RewardCard.cs" />
     <Compile Include="Assets/Scripts/BaseClass/DropZone.cs" />
-    <Compile Include="Assets/Scripts/ZoomUI.cs" />
+    <Compile Include="Assets/Scripts/BaseClass/ZoomUI.cs" />
     <Compile Include="Assets/Scripts/BaseClass/StatusClass.cs" />
     <Compile Include="Assets/Scripts/BaseClass/Weapon.cs" />
     <Compile Include="Assets/Scripts/CardDisplay.cs" />
@@ -67,11 +67,15 @@
     <Compile Include="Assets/Scripts/WeaponDeckManager.cs" />
     <Compile Include="Assets/Scripts/ScrollManager.cs" />
     <Compile Include="Assets/Scripts/DeckManager.cs" />
-    <Compile Include="Assets/Scripts/CardStore.cs" />
+    <Compile Include="Assets/Scripts/MovesCardStore.cs" />
     <Compile Include="Assets/Scripts/WeaponDisplay.cs" />
     <Compile Include="Assets/Scripts/BaseClass/Enemy.cs" />
     <Compile Include="Assets/Scripts/RewardManager.cs" />
     <Compile Include="Assets/Scripts/WeaponDropZone.cs" />
+    <Compile Include="Assets/Scripts/PlayerWeapon.cs" />
+    <Compile Include="Assets/Scripts/BaseClass/Moves.cs" />
+    <Compile Include="Assets/Scripts/MovesCardDisplay.cs" />
+    <Compile Include="Assets/Scripts/MovesDeckManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

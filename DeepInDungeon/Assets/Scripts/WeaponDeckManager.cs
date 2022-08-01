@@ -9,10 +9,35 @@ public class WeaponDeckManager : MonoBehaviour
 
     public Transform weaponDeck;
     public GameObject weaponPrefab;
-
+    //行動管理器
+    public MovesDeckManager mdManager;
     //武器擺放空間
     public WeaponDropZone mainWeaponZone;
+    private Weapon mainWeapon;
+    public Weapon MainWeapon
+    {
+        get { return mainWeapon; }
+        set
+        {
+            this.mainWeapon = value;
+            Debug.Log("主手武器是" + value.name);
+            mdManager.ReplaceNewMoveCards(value);
+        }
+    } 
     public WeaponDropZone secondaryWeaponZone;
+    private Weapon secWeapon;
+    public Weapon SecondaryWeapon
+    {
+        get { return secWeapon; }
+        set
+        {
+            this.secWeapon = value;
+            Debug.Log("副手武器是" + value.name);
+            mdManager.ReplaceNewMoveCards(value);
+        }
+    }
+    
+
 
     private void Awake()
     {
@@ -118,5 +143,6 @@ public class WeaponDeckManager : MonoBehaviour
         secondaryWeaponZone.hand = Hand.Secondary;
     }
  
+    
 
 }

@@ -1,0 +1,3 @@
+﻿weapon,ID,Name,Cost,Description,Attack,Defend
+all,0,攻擊,1,進行攻擊並額外造成兩點的傷害,1,0
+all,1,隔檔,1,進行隔檔必額外附帶兩點護盾,0,1
