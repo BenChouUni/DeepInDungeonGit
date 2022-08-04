@@ -1,21 +1,23 @@
 ﻿<Properties StartupConfiguration="{6CA85496-1C88-B641-9BF3-593E2106F492}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MovesDeckManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Draggable.cs">
     <Files>
-      <File FileName="Assets/Scripts/CardDisplay.cs" />
-      <File FileName="Assets/Scripts/CardStore.cs" Line="33" Column="37" />
-      <File FileName="Assets/Scripts/PlayerDeckStore.cs" Line="21" Column="11" />
-      <File FileName="Assets/Scripts/DeckManager.cs" Line="9" Column="44" />
+      <File FileName="Assets/Scripts/CardStore.cs" Line="33" Column="76" />
+      <File FileName="Assets/Scripts/PlayerDeckStore.cs" Line="64" Column="45" />
+      <File FileName="Assets/Scripts/MovesDeckManager.cs" Line="88" Column="20" />
+      <File FileName="Assets/Scripts/RewardManager.cs" Line="89" Column="7" />
+      <File FileName="Assets/Scripts/WeaponDisplay.cs" Line="53" Column="10" />
+      <File FileName="Assets/Scripts/WeaponDeckManager.cs" Line="173" Column="48" />
+      <File FileName="Assets/Scripts/WeaponDropZone.cs" Line="39" Column="43" />
+      <File FileName="Assets/Scripts/MovesCardDisplay.cs" Line="25" Column="44" />
       <File FileName="Assets/Data/PlayerDeck.csv" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ScrollManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/RewardManager.cs" Line="76" Column="75" />
-      <File FileName="Assets/Scripts/RewardCard.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/WeaponDisplay.cs" Line="34" Column="20" />
-      <File FileName="Assets/Scripts/WeaponDeckManager.cs" Line="37" Column="1" />
-      <File FileName="Assets/Scripts/WeaponDropZone.cs" Line="81" Column="13" />
-      <File FileName="Assets/Data/WeaponListData.csv" Line="5" Column="26" />
-      <File FileName="Assets/Scripts/PlayerWeapon.cs" Line="10" Column="5" />
-      <File FileName="Assets/Scripts/MovesCardDisplay.cs" Line="11" Column="34" />
-      <File FileName="Assets/Scripts/MovesDeckManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/DataPersistence/DataPersistenceManager.cs" Line="34" Column="72" />
+      <File FileName="Assets/Scripts/DataPersistence/Data/GameData.cs" Line="11" Column="2" />
+      <File FileName="Assets/Scripts/DataPersistence/FileDataHandler.cs" Line="62" Column="13" />
+      <File FileName="Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" Line="385" Column="1" />
+      <File FileName="Assets/Scripts/BaseClass/Card.cs" Line="5" Column="22" />
+      <File FileName="Assets/Scripts/BaseClass/Moves.cs" Line="5" Column="22" />
+      <File FileName="Assets/Scripts/BaseClass/Weapon.cs" Line="19" Column="24" />
+      <File FileName="Assets/Scripts/Draggable.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">

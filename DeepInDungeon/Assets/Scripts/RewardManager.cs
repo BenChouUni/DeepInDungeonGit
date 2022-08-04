@@ -9,15 +9,15 @@ public class RewardManager : MonoBehaviour
 
     public GameObject DataManager;
     private PlayerDeckStore playerDeckStore;
-    private MovesCardStore cardStore;
+    private MovesCardLoadByWeapon cardStore;
 
-    //public int[] randomIDs;
+    /*
 
     // Start is called before the first frame update
     void Start()
     {
         playerDeckStore = DataManager.GetComponent<PlayerDeckStore>();
-        cardStore = DataManager.GetComponent<MovesCardStore>();
+        cardStore = DataManager.GetComponent<MovesCardLoadByWeapon>();
         
 
         DrawThreeRandomCards();
@@ -86,4 +86,5 @@ public class RewardManager : MonoBehaviour
         int[] ids = RandomNonUpgradedID(3);
         CreateRewardCards(ids);
     }
+    */
 }

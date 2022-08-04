@@ -2,23 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Hand
-{
-    Empty,Main, Secondary, TwoHanded
-}
 
+
+[System.Serializable]
 public class Weapon:Card
 {
-
     
-
+    public enum Hand
+    {
+        Empty = 0, Main = 1, Secondary = 2, TwoHanded = 3
+    }
     
-    public int Attack { get; set; }
-    public int Defense { get; set; }
+    public Hand hand;
+
+    public int Attack;
+    public int Defense;
     public int slotNumber;
+
+
     
 
-    private Hand hand;
+    
     public Hand WeaponHand
     {
         get { return hand; }
@@ -35,5 +39,32 @@ public class Weapon:Card
         this.hand = _hand;
     }
 
+    public static Hand CheckHandByString(string str)
+    {
+
+
+        switch (str.Trim())
+        {
+            case "main":
+                //Debug.Log("主要");
+                return Hand.Main;
+
+            case "sec":
+                //Debug.Log("副手");
+                return Hand.Secondary;
+
+            case "two":
+                //Debug.Log("雙手");
+                return Hand.TwoHanded;
+
+
+            default:
+                //Debug.Log("空");
+                return Hand.Empty;
+
+
+        }
+
+    }
 
 }

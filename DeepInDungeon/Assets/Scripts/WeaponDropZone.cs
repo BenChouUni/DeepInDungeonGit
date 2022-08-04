@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class WeaponDropZone : DropZone, IDropHandler
 {
-    public Hand hand = Hand.Empty;//由外部管理器決定此物件是哪個
+    public Weapon.Hand hand = Weapon.Hand.Empty;//由外部管理器決定此物件是哪隻手的區域
 
     public WeaponDeckManager wdManager;
 
@@ -14,7 +14,7 @@ public class WeaponDropZone : DropZone, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
-        if (hand == Hand.Empty || hand == Hand.TwoHanded)
+        if (hand == Weapon.Hand.Empty || hand == Weapon.Hand.TwoHanded)
         {
             Debug.Log("這空間未被認為是哪種手");
             return;
@@ -32,14 +32,18 @@ public class WeaponDropZone : DropZone, IDropHandler
            
            
 
-            if (CheckHas<WeaponDisplay>())//確定原先上面有沒有武器
+            if (CheckHas<WeaponDisplay>())//如果上面有武器先返回
             {
                 Debug.Log("上面有武器了");
+                Weapon prepareRemoveWeapon = WeaponOnZone();
                 ReturnAllObjectToOrigin();
+                //告訴要把moves移除
+                wdManager.TellMDMDestroyMoves(prepareRemoveWeapon);
             }
 
             DropIn(dropInStuff);
-            TellWeaponType();
+
+            TellManagerANewWeapon(dropInStuff.GetComponent<WeaponDisplay>().weapon);
             
         }
         
@@ -47,9 +51,9 @@ public class WeaponDropZone : DropZone, IDropHandler
 
     private bool CheckHand(WeaponDisplay wd)
     {
-        if (wd.weapon.WeaponHand == Hand.TwoHanded)
+        if (wd.weapon.WeaponHand == Weapon.Hand.TwoHanded)
         {//當進來的是雙手武器只能擺在主武器的位置
-            if ( hand == Hand.Main)
+            if ( hand == Weapon.Hand.Main)
             {
                 return true;
             }
@@ -65,8 +69,22 @@ public class WeaponDropZone : DropZone, IDropHandler
 
     public Weapon WeaponOnZone()
     {
-        Weapon we = ZoneList[0].GetComponent<WeaponDisplay>().weapon;
+        Weapon we = null;
+        foreach (Transform child in this.transform)
+        {
+            
+            if (child.gameObject.GetComponent<WeaponDisplay>()!=null)
+            {
+                we = child.gameObject.GetComponent<WeaponDisplay>().weapon;
+                
+            }
+            Debug.Log(child.gameObject.GetComponent<WeaponDisplay>().weapon.name);
+        }
 
+        if (we == null)
+        {
+            Debug.LogError(hand.ToString()+"上面沒有武器");
+        }
         return we;
 
     }
@@ -74,17 +92,17 @@ public class WeaponDropZone : DropZone, IDropHandler
     /// <summary>
     /// 告訴控制器傳入這個Dropzone的weapon
     /// </summary>
-    private void TellWeaponType()
+    private void TellManagerANewWeapon(Weapon weapon)
     {
-        if (hand == Hand.Main)
+        if (hand == Weapon.Hand.Main)
         {
-            
-           
-            wdManager.MainWeapon = WeaponOnZone();
+            wdManager.MainWeapon = weapon;
         }
-        else if (hand == Hand.Secondary)
+        else if (hand == Weapon.Hand.Secondary)
         {
-            wdManager.SecondaryWeapon = WeaponOnZone();
+            wdManager.SecondaryWeapon = weapon;
         }
     }
+
+
 }

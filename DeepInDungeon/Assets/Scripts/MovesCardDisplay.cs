@@ -20,9 +20,9 @@ public class MovesCardDisplay : CardDisplay
     {
         card = move;
         ShowCard();
-        Debug.Log("確認");
+        
         costText.text = move.cost.ToString();
-        weaponBelong.text = move.weapon.name;
+        weaponBelong.text = move.weaponName;
         
         
 

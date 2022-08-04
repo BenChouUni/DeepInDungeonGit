@@ -47,23 +47,23 @@ public class WeaponDisplay : CardDisplay
      
     }
 
-    private void BgColorChange(Hand hand)
+    private void BgColorChange(Weapon.Hand hand)
     {
         switch (hand)
         {
-            case Hand.Empty:
+            case Weapon.Hand.Empty:
                 //不在手上淺藍色
                 bg.color = new Color32(141, 200, 219,255);
                 return;
-            case Hand.Main:
+            case Weapon.Hand.Main:
                 //主手紅色
                 bg.color = new Color32(219, 50, 50,255);
                 return;
-            case Hand.Secondary:
+            case Weapon.Hand.Secondary:
                 //副手藍色
                 bg.color = new Color32(50, 74, 220,255);
                 return;
-            case Hand.TwoHanded:
+            case Weapon.Hand.TwoHanded:
                 //雙手紫色
                 bg.color = new Color32(148, 73, 229,255);
                 return;

@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class RewardCard : MonoBehaviour, IPointerDownHandler
+public class RewardCard : MonoBehaviour
 {
     private GameObject DataManager;
     private PlayerDeckStore playerDeckStore;
 
     private GameObject RewardsManager;
     private RewardManager rewardManager;
-    // Start is called before the first frame update
+    /*
     void Start()
     {
         DataManager = GameObject.Find("DataManager");
@@ -23,10 +23,11 @@ public class RewardCard : MonoBehaviour, IPointerDownHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         int id = this.GetComponent<CardDisplay>().card.id;
-        playerDeckStore.PlayerDeckCards.Add(id);
+        //playerDeckStore.PlayerDeckCards.Add(id);
 
-        playerDeckStore.SavePlayerDeck();
+        //playerDeckStore.SavePlayerDeck();
         rewardManager.ClearRewardCards();
 
     }
+    */
 }

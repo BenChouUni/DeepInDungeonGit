@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponDeckManager : MonoBehaviour
+public class WeaponDeckManager : MonoBehaviour,IDataPersistence
 {
     public TextAsset weaponData;
     public List<Weapon> WeaponList = new List<Weapon>();
 
-    public Transform weaponDeck;
+    public Transform weaponPanel;
     public GameObject weaponPrefab;
+
+    //玩家武器
+    public PlayerWeapon playerWeapon;
     //行動管理器
     public MovesDeckManager mdManager;
     //武器擺放空間
-    public WeaponDropZone mainWeaponZone;
+    public GameObject mainWeaponZone;
     private Weapon mainWeapon;
     public Weapon MainWeapon
     {
@@ -21,10 +24,12 @@ public class WeaponDeckManager : MonoBehaviour
         {
             this.mainWeapon = value;
             Debug.Log("主手武器是" + value.name);
-            mdManager.ReplaceNewMoveCards(value);
+            
+            mdManager.CreateMovesDeckByWeapon(value);
         }
-    } 
-    public WeaponDropZone secondaryWeaponZone;
+    }
+
+    public GameObject secondaryWeaponZone;
     private Weapon secWeapon;
     public Weapon SecondaryWeapon
     {
@@ -33,7 +38,7 @@ public class WeaponDeckManager : MonoBehaviour
         {
             this.secWeapon = value;
             Debug.Log("副手武器是" + value.name);
-            mdManager.ReplaceNewMoveCards(value);
+            mdManager.CreateMovesDeckByWeapon(value);
         }
     }
     
@@ -47,9 +52,10 @@ public class WeaponDeckManager : MonoBehaviour
 
     private void Start()
     {
-    
+        //先創建所有牌庫在轉移
         CreateAllWeaponDeck();
-        
+        CreatePlayWeapon();
+
     }
     //讀取資料
     public void LoadWeaponData()
@@ -76,7 +82,7 @@ public class WeaponDeckManager : MonoBehaviour
 
 
 
-                Hand hand = CheckHandByString(s);
+                Weapon.Hand hand = Weapon.CheckHandByString(s);
 
                 
                 Weapon weapon = new Weapon(id, name, atk, def, slot, describtion,hand);
@@ -90,59 +96,99 @@ public class WeaponDeckManager : MonoBehaviour
         }
     }
 
-    public static Hand CheckHandByString(string str)
-    {
 
-        
-        switch (str)
-        {
-            case "main":
-                //Debug.Log("主要");
-                return Hand.Main;
-                
-            case "sec":
-                //Debug.Log("副手");
-                return Hand.Secondary;
-                
-            case "two":
-                //Debug.Log("雙手");
-                return Hand.TwoHanded;
-                
 
-            default:
-                //Debug.Log("空");
-                return Hand.Empty;
-                
-                
-        }
-
-    }
-
-    public void CreateWeapon(int _id)//同卡分不同張
+    public void CreateWeaponOnPanel(Weapon weapon)//同卡分不同張
     {
         
         GameObject newWeapon = GameObject.Instantiate(weaponPrefab, new Vector3(0, 0, 0), Quaternion.identity);
-        newWeapon.transform.SetParent(weaponDeck, false);
-       
-        newWeapon.GetComponent<WeaponDisplay>().weapon = WeaponList[_id];
+        if (newWeapon.GetComponent<Draggable>()!=null)
+        {
+            newWeapon.GetComponent<Draggable>().StartParent = weaponPanel;
+        }
+        newWeapon.transform.SetParent(weaponPanel, false);
+
+        newWeapon.GetComponent<WeaponDisplay>().weapon = weapon;
 
         
     }
 
     public void CreateAllWeaponDeck()
     {
-        for (int i = 0; i < WeaponList.Count; i++)
+        foreach (Weapon weapon in WeaponList)
         {
-            CreateWeapon(i);
+            CreateWeaponOnPanel(weapon);
         }
     }
 
-    public void initialWeaponZone()
+    private void CreatePlayWeapon()
     {
-        mainWeaponZone.hand = Hand.Main;
-        secondaryWeaponZone.hand = Hand.Secondary;
+        Weapon main = playerWeapon.mainWeapon;
+        Weapon sec = playerWeapon.secondaryWeapon;
+
+        if (main.hand != Weapon.Hand.Empty)
+        {
+
+            GameObject newMainWeapon = FindWeaponObjInPanel(main);
+            newMainWeapon.transform.SetParent(mainWeaponZone.transform, false);
+
+            this.MainWeapon = main;
+        }
+
+        if (sec.hand != Weapon.Hand.Empty)
+        {
+            GameObject newSecWeapon = FindWeaponObjInPanel(sec);
+            newSecWeapon.transform.SetParent(secondaryWeaponZone.transform, false);
+
+            this.SecondaryWeapon = sec;
+        }
+        
     }
- 
+
+    private GameObject FindWeaponObjInPanel(Weapon weapon)
+    {
+        Debug.Log("嘗試在panel尋找"+weapon.name);
+        foreach (Transform child in weaponPanel)
+        {
+            Weapon childWeapon = child.gameObject.GetComponent<WeaponDisplay>().weapon;
+            Debug.Log(childWeapon.name);
+            if (childWeapon.name == weapon.name)
+            {
+                Debug.Log("在武器庫找到" + childWeapon.name);
+                return child.gameObject;
+            }
+       
+        }
+        Debug.LogError("在武器庫找不到所要武器");
+        return null;
+    }
     
 
+    public void initialWeaponZone()
+    {
+        mainWeaponZone.GetComponent<WeaponDropZone>().hand = Weapon.Hand.Main;
+        secondaryWeaponZone.GetComponent<WeaponDropZone>().hand = Weapon.Hand.Secondary;
+    }
+ /// <summary>
+ /// 輸入武器告訴movesmanager把該武器的牌刪掉
+ /// </summary>
+ /// <param name="weapon"></param>
+    public void TellMDMDestroyMoves(Weapon weapon)
+    {
+        mdManager.DestroyMovesByWeapon(weapon);
+    }
+
+    public void LoadData(GameData data)
+    {
+        this.playerWeapon = data.playerWeapon;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        Debug.Log("將"+mainWeapon.name+"存入");
+        this.playerWeapon = new PlayerWeapon(mainWeapon, secWeapon);
+        data.playerWeapon = this.playerWeapon;
+        data.mainWeaponName = mainWeapon.name;
+        
+    }
 }

@@ -9,16 +9,16 @@ using UnityEngine.UI;
 public class Draggable : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDragHandler
 {
     //初始parent 以便放開後返回
-    private Transform startParent = null;
-    public Transform StartParent
-    {
-        get { return startParent; }
-    }
+    
+    public Transform StartParent;
+
     public GameObject canvas;
 
-    private void Awake()
+
+    private void Start()
     {
         canvas = GameObject.Find("Canvas").gameObject;
+        
     }
 
 
@@ -27,8 +27,8 @@ public class Draggable : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDragHa
 
     public void OnBeginDrag(PointerEventData eventData)//開始拖動執行一次
     {
-        startParent = this.transform.parent;
-        parentReturnTo = startParent;
+        
+        parentReturnTo = this.transform.parent;
         
 
         //拖動時移到canvas底下
@@ -55,7 +55,7 @@ public class Draggable : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDragHa
 
     public void ReturnToStartParent()
     {
-        this.transform.SetParent(startParent);
+        this.transform.SetParent(StartParent);
     }
 
     private void TurnRaycastBlock(bool value)

@@ -7,7 +7,7 @@ public class DeckManager : MonoBehaviour
     public GameObject DataManager;
 
     private PlayerDeckStore playerDeckStore;
-    private MovesCardStore cardStore;
+    private MovesCardLoadByWeapon cardStore;
 
     public Transform deckPanel;
     public GameObject CardPrefab;
@@ -16,9 +16,9 @@ public class DeckManager : MonoBehaviour
     void Start()
     {
         playerDeckStore = DataManager.GetComponent<PlayerDeckStore>();
-        cardStore = DataManager.GetComponent<MovesCardStore>();
+        cardStore = DataManager.GetComponent<MovesCardLoadByWeapon>();
 
-        UpdateDeck();
+        //UpdateDeck();
     }
 
     // Update is called once per frame
@@ -27,7 +27,8 @@ public class DeckManager : MonoBehaviour
         
     }
 
-    public void CreateDeckCard(int _index)//同卡分不同張
+    /*
+    //public void CreateDeckCard(int _index)//同卡分不同張
     {
 
         GameObject newCard = GameObject.Instantiate(CardPrefab, new Vector3(0, 0, 0), Quaternion.identity);
@@ -47,6 +48,6 @@ public class DeckManager : MonoBehaviour
 
         }
     }
-
+    */
 
 }
