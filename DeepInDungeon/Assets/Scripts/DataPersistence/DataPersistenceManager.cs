@@ -33,6 +33,7 @@ public class DataPersistenceManager : MonoBehaviour
         this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
         this.dataPersistencesObjects = FindAllDataPersistencesObject();
         LoadGame();//沒有loaddata會無法載入東西
+        //NewGame();//測試用新檔
     }
 
     private void Start()
@@ -46,6 +47,10 @@ public class DataPersistenceManager : MonoBehaviour
     public void NewGame()
     {
         this.gameData = new GameData();
+        foreach (IDataPersistence dataPersistenceObj in dataPersistencesObjects)
+        {
+            dataPersistenceObj.LoadData(this.gameData);
+        }
     }
 
     public void Savegame()
@@ -62,14 +67,10 @@ public class DataPersistenceManager : MonoBehaviour
         {
             Debug.Log("沒有武器");
         }
-        else
-        {
-            Debug.Log(this.gameData.playerWeapon.mainWeapon.name);
-        }
 
       
-        Debug.Log(this.gameData.playerMovesDeck.Count.ToString());
-        Debug.Log(this.gameData.mainWeaponName);
+        //Debug.Log(this.gameData.playerMovesDeck.Count.ToString());
+        
 
         //將資料存成Json
         dataHandler.Save(gameData);

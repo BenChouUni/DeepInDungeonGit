@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class HpStatus : MonoBehaviour
+using System;
+[Serializable]
+public class HpStatus
 {
     private int hp;
     public int Hp
@@ -11,13 +12,8 @@ public class HpStatus : MonoBehaviour
         
     }
 
-    private int hpMax;
-    public int HpMax
-    {
-        get { return hpMax; }
-
-        set { hpMax = value; }
-    }
+    public int hpMax;
+    
 
 
 

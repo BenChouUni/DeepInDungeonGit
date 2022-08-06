@@ -753,7 +753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5da9451ee451a421a890e896e32f9dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoomSize: 1.2
+  zoomSize: 1.1
 --- !u!114 &1033569777294283434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -769,6 +769,16 @@ MonoBehaviour:
   nameText: {fileID: 1677693465997941528}
   discriptiontText: {fileID: 8892912009493190867}
   Image: {fileID: 1106008878100680555}
+  card:
+    id: 0
+    name: 
+    cardDescription: 
   costText: {fileID: 7670546642704698692}
   weaponBelong: {fileID: 9025920147057023905}
   backgound: {fileID: 1106008878100680555}
+  move:
+    id: 0
+    name: 
+    cardDescription: 
+    cost: 0
+    weaponName: 

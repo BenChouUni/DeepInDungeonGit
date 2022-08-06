@@ -16,7 +16,7 @@ public class WeaponDropZone : DropZone, IDropHandler
     {
         if (hand == Weapon.Hand.Empty || hand == Weapon.Hand.TwoHanded)
         {
-            Debug.Log("這空間未被認為是哪種手");
+            Debug.LogError("此手牌區找不到歸屬");
             return;
         }
 
@@ -35,11 +35,9 @@ public class WeaponDropZone : DropZone, IDropHandler
             if (CheckHas<WeaponDisplay>())//如果上面有武器先返回
             {
                 Debug.Log("上面有武器了");
-                Weapon prepareRemoveWeapon = WeaponOnZone();
-                ReturnAllObjectToOrigin();
-                //告訴要把moves移除
-                wdManager.TellMDMDestroyMoves(prepareRemoveWeapon);
+                RemoveWeaponOn();
             }
+
 
             DropIn(dropInStuff);
 
@@ -47,6 +45,14 @@ public class WeaponDropZone : DropZone, IDropHandler
             
         }
         
+    }
+
+    public void RemoveWeaponOn()
+    { 
+        Weapon prepareRemoveWeapon = WeaponOnZone();
+        ReturnAllObjectToOrigin();
+        //告訴要把moves移除
+        wdManager.TellMDMDestroyMoves(prepareRemoveWeapon);
     }
 
     private bool CheckHand(WeaponDisplay wd)

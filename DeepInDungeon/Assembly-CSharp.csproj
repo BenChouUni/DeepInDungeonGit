@@ -54,33 +54,35 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets/Scripts/Draggable.cs" />
-    <Compile Include="Assets/Scripts/RewardCard.cs" />
+    <Compile Include="Assets/Scripts/BaseClass/HpStatus.cs" />
+    <Compile Include="Assets/Scripts/Moves/Moves.cs" />
+    <Compile Include="Assets/Scripts/WeaponPanelDropZone.cs" />
     <Compile Include="Assets/Scripts/BaseClass/DropZone.cs" />
+    <Compile Include="Assets/Scripts/DataPersistence/Data/PlayerData/PlayerWeapon.cs" />
     <Compile Include="Assets/Scripts/BaseClass/ZoomUI.cs" />
     <Compile Include="Assets/Scripts/BaseClass/StatusClass.cs" />
-    <Compile Include="Assets/Scripts/BaseClass/Weapon.cs" />
+    <Compile Include="Assets/Scripts/Weapon/Weapon.cs" />
     <Compile Include="Assets/Scripts/CardDisplay.cs" />
+    <Compile Include="Assets/Scripts/Manager/ButtonManager.cs" />
+    <Compile Include="Assets/Scripts/DataPersistence/DataPersistenceManager.cs" />
     <Compile Include="Assets/Scripts/BaseClass/Card.cs" />
     <Compile Include="Assets/Scripts/BaseClass/Part.cs" />
-    <Compile Include="Assets/Scripts/DataPersistence/Data/PlayerData/Player.cs" />
-    <Compile Include="Assets/Scripts/DataPersistence/Data/PlayerData/PlayerDeckStore.cs" />
-    <Compile Include="Assets/Scripts/WeaponDeckManager.cs" />
-    <Compile Include="Assets/Scripts/ScrollManager.cs" />
-    <Compile Include="Assets/Scripts/DeckManager.cs" />
-    <Compile Include="Assets/Scripts/MovesCardLoadByWeapon.cs" />
-    <Compile Include="Assets/Scripts/WeaponDisplay.cs" />
-    <Compile Include="Assets/Scripts/BaseClass/Enemy.cs" />
-    <Compile Include="Assets/Scripts/RewardManager.cs" />
     <Compile Include="Assets/Scripts/WeaponDropZone.cs" />
-    <Compile Include="Assets/Scripts/DataPersistence/Data/PlayerData/PlayerWeapon.cs" />
-    <Compile Include="Assets/Scripts/BaseClass/Moves.cs" />
-    <Compile Include="Assets/Scripts/MovesCardDisplay.cs" />
-    <Compile Include="Assets/Scripts/MovesDeckManager.cs" />
-    <Compile Include="Assets/Scripts/BaseClass/HpStatus.cs" />
-    <Compile Include="Assets/Scripts/DataPersistence/Data/GameData.cs" />
-    <Compile Include="Assets/Scripts/DataPersistence/DataPersistenceManager.cs" />
-    <Compile Include="Assets/Scripts/DataPersistence/IDataPersistence.cs" />
+    <Compile Include="Assets/Scripts/Manager/WeaponDeckManager.cs" />
+    <Compile Include="Assets/Scripts/Manager/MovesDeckManager.cs" />
+    <Compile Include="Assets/Scripts/Moves/MovesCardDisplay.cs" />
+    <Compile Include="Assets/Scripts/Manager/PlayerMovesManager.cs" />
     <Compile Include="Assets/Scripts/DataPersistence/FileDataHandler.cs" />
+    <Compile Include="Assets/Scripts/ScrollManager.cs" />
+    <Compile Include="Assets/Scripts/Manager/PlayerStatusManager.cs" />
+    <Compile Include="Assets/Scripts/DataPersistence/Data/PlayerData/PlayerStatus.cs" />
+    <Compile Include="Assets/Scripts/DataPersistence/IDataPersistence.cs" />
+    <Compile Include="Assets/Scripts/Weapon/WeaponDisplay.cs" />
+    <Compile Include="Assets/Scripts/BaseClass/Enemy.cs" />
+    <Compile Include="Assets/Scripts/PlayerStatusDisplay.cs" />
+    <Compile Include="Assets/Scripts/DataPersistence/Data/GameData.cs" />
+    <Compile Include="Assets/Scripts/Manager/DeckSceneManager.cs" />
+    <Compile Include="Assets/Scripts/Manager/CheckMovesSceneManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

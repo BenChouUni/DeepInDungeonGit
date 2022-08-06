@@ -1,35 +1,27 @@
 ﻿<Properties StartupConfiguration="{6CA85496-1C88-B641-9BF3-593E2106F492}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Draggable.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Manager/CheckMovesSceneManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/CardStore.cs" Line="33" Column="76" />
-      <File FileName="Assets/Scripts/PlayerDeckStore.cs" Line="64" Column="45" />
-      <File FileName="Assets/Scripts/MovesDeckManager.cs" Line="88" Column="20" />
-      <File FileName="Assets/Scripts/RewardManager.cs" Line="89" Column="7" />
-      <File FileName="Assets/Scripts/WeaponDisplay.cs" Line="53" Column="10" />
-      <File FileName="Assets/Scripts/WeaponDeckManager.cs" Line="173" Column="48" />
-      <File FileName="Assets/Scripts/WeaponDropZone.cs" Line="39" Column="43" />
-      <File FileName="Assets/Scripts/MovesCardDisplay.cs" Line="25" Column="44" />
-      <File FileName="Assets/Data/PlayerDeck.csv" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/DataPersistence/DataPersistenceManager.cs" Line="34" Column="72" />
-      <File FileName="Assets/Scripts/DataPersistence/Data/GameData.cs" Line="11" Column="2" />
-      <File FileName="Assets/Scripts/DataPersistence/FileDataHandler.cs" Line="62" Column="13" />
+      <File FileName="Assets/Scripts/WeaponDropZone.cs" Line="41" Column="1" />
+      <File FileName="Assets/Scripts/DataPersistence/DataPersistenceManager.cs" Line="56" Column="12" />
+      <File FileName="Assets/Scripts/DataPersistence/Data/GameData.cs" Line="19" Column="54" />
       <File FileName="Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" Line="385" Column="1" />
-      <File FileName="Assets/Scripts/BaseClass/Card.cs" Line="5" Column="22" />
-      <File FileName="Assets/Scripts/BaseClass/Moves.cs" Line="5" Column="22" />
-      <File FileName="Assets/Scripts/BaseClass/Weapon.cs" Line="19" Column="24" />
-      <File FileName="Assets/Scripts/Draggable.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/WeaponPanelDropZone.cs" />
+      <File FileName="Assets/Scripts/Manager/MovesDeckManager.cs" />
+      <File FileName="Assets/Scripts/Manager/WeaponDeckManager.cs" />
+      <File FileName="Assets/Scripts/Manager/ButtonManager.cs" Line="19" Column="1" />
+      <File FileName="Assets/Scripts/DataPersistence/Data/PlayerData/PlayerWeapon.cs" />
+      <File FileName="Assets/Scripts/BaseClass/HpStatus.cs" />
+      <File FileName="Assets/Scripts/DataPersistence/Data/PlayerData/PlayerStatus.cs" />
+      <File FileName="Assets/Scripts/PlayerStatusDisplay.cs" />
+      <File FileName="Assets/Scripts/Manager/PlayerStatusManager.cs" />
+      <File FileName="Assets/Scripts/Manager/PlayerMovesManager.cs" Line="4" Column="3" />
+      <File FileName="Assets/Scripts/Manager/DeckSceneManager.cs" Line="17" Column="6" />
+      <File FileName="Assets/Scripts/Manager/CheckMovesSceneManager.cs" Line="7" Column="12" />
     </Files>
-    <Pads>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="Unity" expanded="True" selected="True" />
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a4137990-0da3-4bce-8011-735398abef65" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="150cbd90-6342-47a5-8521-881cda37a34e" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
