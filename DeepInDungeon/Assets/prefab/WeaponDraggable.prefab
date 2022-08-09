@@ -832,6 +832,10 @@ MonoBehaviour:
   nameText: {fileID: 4546896909633081105}
   discriptiontText: {fileID: 6631086945084803377}
   Image: {fileID: 4872613461236053321}
+  card:
+    id: 0
+    name: 
+    cardDescription: 
   bg: {fileID: 2779395767408641198}
   atkText: {fileID: 5641464950862537618}
   defText: {fileID: 3115206802002691724}
@@ -839,6 +843,14 @@ MonoBehaviour:
   - {fileID: 3421942449621232431}
   - {fileID: 7292286969234776231}
   - {fileID: 2774025321590181135}
+  weapon:
+    id: 0
+    name: 
+    cardDescription: 
+    hand: 0
+    Attack: 0
+    Defense: 0
+    slotNumber: 0
 --- !u!114 &296266480329090640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -864,6 +876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8edff75da2ac14142a078f4845372d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StartParent: {fileID: 0}
   canvas: {fileID: 0}
   parentReturnTo: {fileID: 0}
 --- !u!225 &8433046637574461562

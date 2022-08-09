@@ -560,7 +560,6 @@ GameObject:
   - component: {fileID: 236149298}
   - component: {fileID: 236149299}
   - component: {fileID: 236149303}
-  - component: {fileID: 236149301}
   - component: {fileID: 236149300}
   - component: {fileID: 236149302}
   m_Layer: 5
@@ -585,8 +584,8 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &236149299
@@ -606,7 +605,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 20
     m_Bottom: 0
-  m_ChildAlignment: 5
+  m_ChildAlignment: 3
   m_Spacing: 50
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
@@ -628,20 +627,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WDManager: {fileID: 1142570258}
---- !u!114 &236149301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 236149297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalFit: 2
-  m_VerticalFit: 0
 --- !u!114 &236149302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -723,6 +708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8eccdc89ddf54c82bdd92605f1303c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponDeckManager: {fileID: 1142570258}
 --- !u!1 &445996807
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,9 +739,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movesCardPrefab: {fileID: 7951635509410862705, guid: 459a6474867e94cfa92ef34d52caa57d, type: 3}
-  moveList: []
+  playerMoveList: []
   MovesDeckPanel: {fileID: 1505609525}
-  MovesCardDeck: {fileID: 4900000, guid: 98105000d84874016b40ce38b0fa2326, type: 3}
+  AllMovesData: {fileID: 4900000, guid: 9461989db3cab4033972dd0910da1d9d, type: 3}
+  MovesByWeapon: {fileID: 4900000, guid: 1830fcaf0921049869e49c5827fb172c, type: 3}
 --- !u!4 &445996810
 Transform:
   m_ObjectHideFlags: 0
@@ -814,7 +801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startBattleButton: {fileID: 1390943948}
-  checkDeckButton: {fileID: 1700490056}
+  checkDeckButton: {fileID: 0}
 --- !u!1 &565400949
 GameObject:
   m_ObjectHideFlags: 0
@@ -1915,7 +1902,9 @@ MonoBehaviour:
     hpStatus:
       hpMax: 0
     coin: 0
-  PlayerStatusDisplay: {fileID: 1821650993}
+  playerNameText: {fileID: 1020716955}
+  coinText: {fileID: 1072393639}
+  maxHealth: {fileID: 1628383549}
 --- !u!1 &1367138911
 GameObject:
   m_ObjectHideFlags: 0
@@ -2155,7 +2144,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1390943951}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 440331559}
+        m_TargetAssemblyTypeName: DeckSceneManager, Assembly-CSharp
+        m_MethodName: ToBattleScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1390943951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2656,14 +2657,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 766f86ff58be64a63bc44ea05949a49f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNameText: {fileID: 1020716955}
-  coinText: {fileID: 1072393639}
-  maxHealth: {fileID: 1628383549}
-  playerStatus:
-    playerName: 
-    hpStatus:
-      hpMax: 0
-    coin: 0
 --- !u!114 &1821650994
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ShowMovesScene.unity
     guid: 8e3f7bf8441104f6a9d12a3915e3cf8c
+  - enabled: 1
+    path: Assets/Scenes/BattleScene.unity
+    guid: 43134778fe6684dacb113540c1b99024
   m_configObjects: {}

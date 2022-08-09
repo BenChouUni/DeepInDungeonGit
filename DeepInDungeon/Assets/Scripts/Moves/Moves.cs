@@ -20,4 +20,14 @@ public class Moves : Card
         this.cost = _cost;
         this.weaponName = _WeaponName;
     }
+
+    public Moves(int _id, string _name, string _description, int _cost) : base(_id, _name, _description)
+    {
+        this.id = _id;
+        this.name = _name;
+        this.cardDescription = _description;
+
+        this.cost = _cost;
+        this.weaponName = "undefined";
+    }
 }
