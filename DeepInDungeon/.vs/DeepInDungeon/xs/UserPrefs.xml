@@ -1,31 +1,33 @@
 ﻿<Properties StartupConfiguration="{6CA85496-1C88-B641-9BF3-593E2106F492}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BaseClass/ZoomUI.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CardAimByArrow.cs">
     <Files>
       <File FileName="Assets/Scripts/WeaponDropZone.cs" Line="41" Column="1" />
-      <File FileName="Assets/Scripts/WeaponPanelDropZone.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Manager/MovesDeckManager.cs" Line="50" Column="65" />
-      <File FileName="Assets/Scripts/Manager/WeaponDeckManager.cs" Line="138" Column="65" />
-      <File FileName="Assets/Scripts/Manager/ButtonManager.cs" Line="12" Column="21" />
+      <File FileName="Assets/Scripts/WeaponPanelDropZone.cs" />
       <File FileName="Assets/Scripts/DataPersistence/Data/PlayerData/PlayerWeapon.cs" />
-      <File FileName="Assets/Scripts/DataPersistence/Data/PlayerData/PlayerStatus.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Manager/PlayerMovesManager.cs" Line="48" Column="1" />
-      <File FileName="Assets/Scripts/Manager/DeckSceneManager.cs" Line="27" Column="40" />
-      <File FileName="Assets/Scripts/Manager/CheckMovesSceneManager.cs" Line="7" Column="2" />
-      <File FileName="Assets/Scripts/BattleManagers/PlayerStatusBattleManager.cs" Line="44" Column="29" />
-      <File FileName="Assets/Scripts/BattleManagers/WeaponBattleManager.cs" Line="26" Column="22" />
-      <File FileName="Assets/Scripts/DataPersistence/Data/MovesData/MovesDataStore.cs" Line="26" Column="1" />
-      <File FileName="Assets/Scripts/Moves/Moves.cs" Line="27" Column="27" />
-      <File FileName="Assets/Data/CardByWeapon.csv" Line="5" Column="13" />
-      <File FileName="Assets/Scripts/BattleManagers/PlayerMovesDeckManager.cs" Line="29" Column="40" />
-      <File FileName="Assets/Scripts/BattleManagers/BattleManager.cs" Line="43" Column="47" />
-      <File FileName="Assets/Scripts/BattleManagers/OrderHandCard.cs" Line="16" Column="1" />
-      <File FileName="Assets/Scripts/Moves/CheckHandCard.cs" Line="9" Column="30" />
-      <File FileName="Assets/Scripts/BaseClass/ZoomUI.cs" Line="6" Column="77" />
+      <File FileName="Assets/Scripts/DataPersistence/Data/PlayerData/PlayerStatus.cs" />
+      <File FileName="Assets/Scripts/BattleManagers/PlayerStatusBattleManager.cs" />
+      <File FileName="Assets/Scripts/BattleManagers/WeaponBattleManager.cs" />
+      <File FileName="Assets/Scripts/DataPersistence/Data/MovesData/MovesDataStore.cs" />
+      <File FileName="Assets/Scripts/Moves/Moves.cs" />
+      <File FileName="Assets/Data/CardByWeapon.csv" />
+      <File FileName="Assets/Scripts/BattleManagers/PlayerMovesDeckManager.cs" />
+      <File FileName="Assets/Scripts/BattleManagers/BattleManager.cs" />
+      <File FileName="Assets/Scripts/BattleManagers/OrderHandCard.cs" />
+      <File FileName="Assets/Scripts/Moves/CheckHandCard.cs" />
+      <File FileName="Assets/Scripts/BaseClass/ZoomUI.cs" />
+      <File FileName="Assets/Scripts/BaseClass/Enemy.cs" />
+      <File FileName="Assets/Scripts/BattleManagers/EnemyStatusManager.cs" />
+      <File FileName="Assets/Scripts/BaseClass/HpStatus.cs" Line="23" Column="26" />
+      <File FileName="Assets/Scripts/DataPersistence/Data/EnemyData/EnemyDatamanager.cs" Line="4" Column="17" />
+      <File FileName="Assets/Scripts/Draggable.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Point.cs" Line="16" Column="49" />
+      <File FileName="Assets/Scripts/Arrow.cs" Line="81" Column="38" />
+      <File FileName="Assets/Scripts/CardAimByArrow.cs" Line="4" Column="31" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4ba0e4d3-fcf6-4e96-964c-168cfbe656eb" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="fbb88af6-069c-40b2-95ea-c08b44cc4e7a" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

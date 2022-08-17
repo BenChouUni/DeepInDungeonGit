@@ -11,12 +11,14 @@ public class CheckHandCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     private bool hasCheck = false;
     [SerializeField]
     private float originalRotate;
+    private int siblingIndex;
 
     private void Start()
     {
         FindCanvas();
         startParent = this.transform.parent;
         originalRotate = this.transform.eulerAngles.z;
+
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -25,8 +27,9 @@ public class CheckHandCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         {
             return;
         }
-        
-        
+
+
+        siblingIndex = this.transform.GetSiblingIndex();
 
         this.transform.rotation = Quaternion.Euler(0, 0, 0);
         this.transform.SetParent(Canvas,true);
@@ -39,6 +42,7 @@ public class CheckHandCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         this.transform.rotation = Quaternion.Euler(0, 0, originalRotate);
         this.transform.Translate(0, -UpLengh, 0);
         this.transform.SetParent(startParent,true);
+        this.transform.SetSiblingIndex(siblingIndex);
         
         hasCheck = false;
     }

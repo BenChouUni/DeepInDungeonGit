@@ -400,6 +400,7 @@ GameObject:
   - component: {fileID: 2110447389907029543}
   - component: {fileID: 2676509072821488470}
   - component: {fileID: 107869251258363711}
+  - component: {fileID: 6752893267119855755}
   m_Layer: 5
   m_Name: MoveHandCard
   m_TagString: Untagged
@@ -487,6 +488,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UpLengh: 50
   originalRotate: 0
+--- !u!114 &6752893267119855755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3930359044121002493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6ef8c6cf99e48029ec097d86608793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3968707045149627566
 GameObject:
   m_ObjectHideFlags: 0
