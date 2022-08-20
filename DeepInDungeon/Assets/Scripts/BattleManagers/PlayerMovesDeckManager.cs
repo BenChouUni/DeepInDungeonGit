@@ -13,24 +13,50 @@ public class PlayerMovesDeckManager : MonoBehaviour,IDataPersistence
     public List<Moves> discardDeck;
     //rotate
     public OrderHandCard orderHandCard;
+    //抽排棄牌堆
+    public Text deckNum;
+    public Text discardNum;
+
+    private void Start()
+    {
+        deckNum.text = playerDeck.Count.ToString();
+        discardNum.text = "0";
+
+    }
 
     public void CreateMovesCard(int num)
     {
+
         for (int i = 0; i < num; i++)
         {
-            GameObject moveCard = GameObject.Instantiate(movesCardPrefab, new Vector3(0, 0, 0), Quaternion.identity);
-            moveCard.transform.SetParent(playerHandArea, false);
-
-            moveCard.gameObject.GetComponent<MovesCardDisplay>().move = playerDeck[i];
-            
+            DrawACard();
         }
-        
-        playerDeck.RemoveRange(0, num);
+
         orderHandCard.UpdateHandCard();
+        deckNum.text = playerDeck.Count.ToString();
+    }
+
+    private void DrawACard()
+    {
+        if (playerDeck.Count == 0)
+        {
+            if (discardDeck.Count != 0)
+            {
+                ReDeck();
+            }
+            else
+            {
+                return;
+            }
+        }
+        GameObject moveCard = GameObject.Instantiate(movesCardPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+        moveCard.transform.SetParent(playerHandArea, false);
+
+        moveCard.gameObject.GetComponent<MovesCardDisplay>().move = playerDeck[0];
+        playerDeck.RemoveAt(0);
         
     }
 
-    
     public void ShuffleMoves()
     {
         System.Random random = new System.Random();
@@ -41,6 +67,19 @@ public class PlayerMovesDeckManager : MonoBehaviour,IDataPersistence
             playerDeck[i] = playerDeck[j];
             playerDeck[j] = playerDeck[i];
         }
+    }
+
+    private void ReDeck()
+    {
+        foreach (Moves move in discardDeck)
+        {
+            playerDeck.Add(move);
+        }
+        discardDeck.Clear();
+
+        deckNum.text = playerDeck.Count.ToString();
+        discardNum.text = discardDeck.Count.ToString();
+        ShuffleMoves();
     }
 
     public void DiscardAllMovesInHand()
@@ -54,6 +93,9 @@ public class PlayerMovesDeckManager : MonoBehaviour,IDataPersistence
 
             }
         }
+        
+        discardNum.text = discardDeck.Count.ToString();
+        //orderHandCard.UpdateHandCard();
     }
     public void LoadData(GameData data)
     {

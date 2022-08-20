@@ -7,8 +7,12 @@ public class CardAimByArrow : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndD
 {
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Arrow.startPoint = this.transform.position;
-        Arrow._Show = true;
+        if (BattleManager.gamePhase == GamePhase.playerTurn)
+        {
+            Arrow.startPoint = this.transform.position;
+            Arrow._Show = true;
+        }
+        
     }
 
     public void OnDrag(PointerEventData eventData)

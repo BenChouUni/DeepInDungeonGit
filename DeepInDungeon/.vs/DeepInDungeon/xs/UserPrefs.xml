@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{6CA85496-1C88-B641-9BF3-593E2106F492}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CardAimByArrow.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BattleManagers/PlayerMovesDeckManager.cs">
     <Files>
       <File FileName="Assets/Scripts/WeaponDropZone.cs" Line="41" Column="1" />
       <File FileName="Assets/Scripts/WeaponPanelDropZone.cs" />
@@ -10,19 +10,16 @@
       <File FileName="Assets/Scripts/DataPersistence/Data/MovesData/MovesDataStore.cs" />
       <File FileName="Assets/Scripts/Moves/Moves.cs" />
       <File FileName="Assets/Data/CardByWeapon.csv" />
-      <File FileName="Assets/Scripts/BattleManagers/PlayerMovesDeckManager.cs" />
-      <File FileName="Assets/Scripts/BattleManagers/BattleManager.cs" />
+      <File FileName="Assets/Scripts/BattleManagers/PlayerMovesDeckManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BattleManagers/BattleManager.cs" Line="36" Column="6" />
       <File FileName="Assets/Scripts/BattleManagers/OrderHandCard.cs" />
       <File FileName="Assets/Scripts/Moves/CheckHandCard.cs" />
-      <File FileName="Assets/Scripts/BaseClass/ZoomUI.cs" />
       <File FileName="Assets/Scripts/BaseClass/Enemy.cs" />
       <File FileName="Assets/Scripts/BattleManagers/EnemyStatusManager.cs" />
       <File FileName="Assets/Scripts/BaseClass/HpStatus.cs" Line="23" Column="26" />
       <File FileName="Assets/Scripts/DataPersistence/Data/EnemyData/EnemyDatamanager.cs" Line="4" Column="17" />
       <File FileName="Assets/Scripts/Draggable.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Point.cs" Line="16" Column="49" />
-      <File FileName="Assets/Scripts/Arrow.cs" Line="81" Column="38" />
-      <File FileName="Assets/Scripts/CardAimByArrow.cs" Line="4" Column="31" />
+      <File FileName="Assets/Scripts/CardAimByArrow.cs" Line="23" Column="54" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

@@ -5,42 +5,61 @@ using UnityEngine;
 
 public enum GamePhase
 {
-    gameStart,playerAction,enemyAction
+    gameStart,playerTurn,enemyTurn,
+
+    gameEnd
 }
 
 public class BattleManager : MonoBehaviour
 {
-    public GamePhase gamePhase = GamePhase.gameStart;
 
     public PlayerMovesDeckManager playerMovesDeckManager;
+
     [SerializeField]
-    private int drawNumber = 4;
+    public static GamePhase gamePhase = GamePhase.gameStart;
+    [SerializeField]
+    private int drawNumber;
 
     private void Start()
     {
         GameStart();
     }
 
-    public void GameStart()
+    private void GameStart()
     {
+        gamePhase = GamePhase.gameStart;
+
         playerMovesDeckManager.ShuffleMoves();
         playerMovesDeckManager.CreateMovesCard(drawNumber);
 
 
-        gamePhase = GamePhase.playerAction;
+        gamePhase = GamePhase.playerTurn;
 
     }
 
+    public void PlayerTurnEnd()
+    {
+        playerMovesDeckManager.DiscardAllMovesInHand();
+        EndTurn();
+        //playerMovesDeckManager.CreateMovesCard(drawNumber);
+    }
     public void EndTurn()
     {
-        if (gamePhase == GamePhase.playerAction)
+        if (gamePhase == GamePhase.playerTurn)
         {
-            gamePhase = GamePhase.enemyAction;
+            
+            gamePhase = GamePhase.enemyTurn;
         }
 
-        if (gamePhase == GamePhase.enemyAction)
+        if (gamePhase == GamePhase.enemyTurn)
         {
-            gamePhase = GamePhase.playerAction;
+            gamePhase = GamePhase.playerTurn;
+           
         }
+    }
+
+    public void EndBattle()
+    {
+        gamePhase = GamePhase.gameEnd;
     }
 }
