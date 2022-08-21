@@ -16,8 +16,8 @@ public class CheckHandCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     private void Start()
     {
         FindCanvas();
-        startParent = this.transform.parent;
-        originalRotate = this.transform.eulerAngles.z;
+        //startParent = this.transform.parent;
+        //originalRotate = this.transform.eulerAngles.z;
 
     }
 
@@ -28,8 +28,9 @@ public class CheckHandCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
             return;
         }
 
-
+        startParent = this.transform.parent;
         siblingIndex = this.transform.GetSiblingIndex();
+        originalRotate = this.transform.eulerAngles.z;
 
         this.transform.rotation = Quaternion.Euler(0, 0, 0);
         this.transform.SetParent(Canvas,true);

@@ -26,10 +26,10 @@ public class PlayerStatusBattleManager : MonoBehaviour,IDataPersistence
     // Start is called before the first frame update
     void Start()
     {
-        LoadPlayerBasicInformation();
+        //ShowPlayerBasicInformation();
     }
 
-    private void LoadPlayerBasicInformation()
+    public void ShowPlayerBasicInformation()
     {
         foreach (Text text in playerName)
         {

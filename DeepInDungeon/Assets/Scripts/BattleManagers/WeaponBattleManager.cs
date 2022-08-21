@@ -23,10 +23,10 @@ public class WeaponBattleManager : MonoBehaviour,IDataPersistence
     // Start is called before the first frame update
     void Start()
     {
-        ShowWeapon();
+        //ShowWeapon();
     }
 
-    private void ShowWeapon()
+    public void ShowWeapon()
     {
         //先生成主武器
         GameObject mainWeapon = GameObject.Instantiate(weaponPrefab, new Vector3(0, 0, 0), Quaternion.identity);

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public enum GamePhase
 {
@@ -12,10 +12,13 @@ public enum GamePhase
 
 public class BattleManager : MonoBehaviour
 {
-
+    public  Text GamePhaseShow;
+    //
     public PlayerMovesDeckManager playerMovesDeckManager;
-
-    [SerializeField]
+    public PlayerStatusBattleManager playerStatusBattleManager;
+    public WeaponBattleManager weaponBattleManager;
+    public EnemyStatusManager enemyStatusManager;
+    
     public static GamePhase gamePhase = GamePhase.gameStart;
     [SerializeField]
     private int drawNumber;
@@ -25,15 +28,26 @@ public class BattleManager : MonoBehaviour
         GameStart();
     }
 
+
+    public void ShowGamePhase()
+    {
+        GamePhaseShow.text = gamePhase.ToString();
+    }
+
     private void GameStart()
     {
         gamePhase = GamePhase.gameStart;
 
+        playerStatusBattleManager.ShowPlayerBasicInformation();
+        weaponBattleManager.ShowWeapon();
+
         playerMovesDeckManager.ShuffleMoves();
         playerMovesDeckManager.CreateMovesCard(drawNumber);
+        enemyStatusManager.ShowEnemyStatus();
 
 
         gamePhase = GamePhase.playerTurn;
+        ShowGamePhase();
 
     }
 
@@ -41,21 +55,23 @@ public class BattleManager : MonoBehaviour
     {
         playerMovesDeckManager.DiscardAllMovesInHand();
         EndTurn();
+        
         //playerMovesDeckManager.CreateMovesCard(drawNumber);
     }
     public void EndTurn()
     {
         if (gamePhase == GamePhase.playerTurn)
         {
-            
+            Debug.Log("玩家回合結束，進入敵方回合");
             gamePhase = GamePhase.enemyTurn;
         }
-
-        if (gamePhase == GamePhase.enemyTurn)
+        else if (gamePhase == GamePhase.enemyTurn)
         {
             gamePhase = GamePhase.playerTurn;
            
         }
+
+        ShowGamePhase();
     }
 
     public void EndBattle()
