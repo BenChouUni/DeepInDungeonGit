@@ -9,6 +9,7 @@ public class CheckHandCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     private Transform startParent;
     public float UpLengh;
     private bool hasCheck = false;
+    
     [SerializeField]
     private float originalRotate;
     private int siblingIndex;
@@ -32,6 +33,8 @@ public class CheckHandCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         siblingIndex = this.transform.GetSiblingIndex();
         originalRotate = this.transform.eulerAngles.z;
 
+        
+
         this.transform.rotation = Quaternion.Euler(0, 0, 0);
         this.transform.SetParent(Canvas,true);
         this.transform.Translate(0,UpLengh,0);
@@ -51,5 +54,6 @@ public class CheckHandCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     private void FindCanvas()
     {
         Canvas = GameObject.Find("Canvas").gameObject.transform;
+       
     }
 }

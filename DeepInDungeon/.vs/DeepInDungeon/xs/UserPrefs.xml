@@ -1,29 +1,60 @@
-﻿<Properties StartupConfiguration="{6CA85496-1C88-B641-9BF3-593E2106F492}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BattleManagers/BattleManager.cs">
+﻿<Properties>
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="fbb88af6-069c-40b2-95ea-c08b44cc4e7a" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BattleManagers/PlayerStatusBattleManager.cs">
     <Files>
       <File FileName="Assets/Scripts/WeaponDropZone.cs" Line="41" Column="1" />
-      <File FileName="Assets/Scripts/WeaponPanelDropZone.cs" />
-      <File FileName="Assets/Scripts/BattleManagers/PlayerStatusBattleManager.cs" Line="32" Column="11" />
+      <File FileName="Assets/Scripts/WeaponPanelDropZone.cs" Line="4" Column="31" />
+      <File FileName="Assets/Scripts/BattleManagers/PlayerStatusBattleManager.cs" Line="4" Column="22" />
       <File FileName="Assets/Scripts/BattleManagers/WeaponBattleManager.cs" Line="29" Column="11" />
       <File FileName="Assets/Scripts/DataPersistence/Data/MovesData/MovesDataStore.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Moves/Moves.cs" />
+      <File FileName="Assets/Scripts/Moves/Moves.cs" Line="1" Column="1" />
       <File FileName="Assets/Data/CardByWeapon.csv" Line="1" Column="1" />
       <File FileName="Assets/Scripts/BattleManagers/PlayerMovesDeckManager.cs" Line="34" Column="1" />
-      <File FileName="Assets/Scripts/BattleManagers/BattleManager.cs" Line="41" Column="42" />
+      <File FileName="Assets/Scripts/BattleManagers/BattleManager.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/BattleManagers/OrderHandCard.cs" Line="112" Column="32" />
-      <File FileName="Assets/Scripts/Moves/CheckHandCard.cs" Line="45" Column="52" />
-      <File FileName="Assets/Scripts/BattleManagers/EnemyStatusManager.cs" />
+      <File FileName="Assets/Scripts/Moves/CheckHandCard.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BattleManagers/EnemyStatusManager.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/BaseClass/HpStatus.cs" Line="23" Column="26" />
       <File FileName="Assets/Scripts/DataPersistence/Data/EnemyData/EnemyDatamanager.cs" Line="4" Column="17" />
       <File FileName="Assets/Scripts/Draggable.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/CardAimByArrow.cs" Line="23" Column="54" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DeepInDungeon" expanded="True">
+            <Node name="Assembly-CSharp" expanded="True">
+              <Node name="Assets" expanded="True">
+                <Node name="Scripts" expanded="True">
+                  <Node name="BattleManagers" expanded="True">
+                    <Node name="PlayerStatusBattleManager.cs" selected="True" />
+                  </Node>
+                  <Node name="DataPersistence" expanded="True">
+                    <Node name="Data" expanded="True">
+                      <Node name="MovesData" expanded="True" />
+                    </Node>
+                  </Node>
+                  <Node name="Moves" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="DeepInDungeon" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="fbb88af6-069c-40b2-95ea-c08b44cc4e7a" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
 </Properties>

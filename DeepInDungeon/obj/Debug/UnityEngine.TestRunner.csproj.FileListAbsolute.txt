@@ -1,0 +1,2 @@
+/Users/peterchou/Desktop/Unity/DeepInDungeonGit/DeepInDungeon/obj/Debug/UnityEngine.TestRunner.csproj.AssemblyReference.cache
+/Users/peterchou/Desktop/Unity/DeepInDungeonGit/DeepInDungeon/obj/Debug/UnityEngine.TestRunner.csproj.CoreCompileInputs.cache

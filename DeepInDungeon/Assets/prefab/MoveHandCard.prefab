@@ -401,6 +401,7 @@ GameObject:
   - component: {fileID: 2676509072821488470}
   - component: {fileID: 107869251258363711}
   - component: {fileID: 6752893267119855755}
+  - component: {fileID: 558432291618701793}
   m_Layer: 5
   m_Name: MoveHandCard
   m_TagString: Untagged
@@ -500,6 +501,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a6ef8c6cf99e48029ec097d86608793, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!225 &558432291618701793
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3930359044121002493}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &3968707045149627566
 GameObject:
   m_ObjectHideFlags: 0

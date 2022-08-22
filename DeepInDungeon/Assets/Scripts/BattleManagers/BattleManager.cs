@@ -15,9 +15,11 @@ public class BattleManager : MonoBehaviour
     public  Text GamePhaseShow;
     //
     public PlayerMovesDeckManager playerMovesDeckManager;
-    public PlayerStatusBattleManager playerStatusBattleManager;
     public WeaponBattleManager weaponBattleManager;
     public EnemyStatusManager enemyStatusManager;
+    public PlayerStatusManager playerStatusManager;
+    //acction manager
+    public EnemyActionManager EnemyActionManager;
     
     public static GamePhase gamePhase = GamePhase.gameStart;
     [SerializeField]
@@ -38,31 +40,35 @@ public class BattleManager : MonoBehaviour
     {
         gamePhase = GamePhase.gameStart;
 
-        playerStatusBattleManager.ShowPlayerBasicInformation();
+        
         weaponBattleManager.ShowWeapon();
 
-        playerMovesDeckManager.ShuffleMoves();
-        playerMovesDeckManager.CreateMovesCard(drawNumber);
+        playerMovesDeckManager.ShuffleMoves(); 
         enemyStatusManager.ShowEnemyStatus();
 
 
-        gamePhase = GamePhase.playerTurn;
+        PlayerTurnStart();
         ShowGamePhase();
 
     }
-
+    public void PlayerTurnStart()
+    {
+        gamePhase = GamePhase.playerTurn;
+        playerMovesDeckManager.CreateMovesCard(drawNumber);
+    }
     public void PlayerTurnEnd()
     {
         playerMovesDeckManager.DiscardAllMovesInHand();
         EndTurn();
         
-        //playerMovesDeckManager.CreateMovesCard(drawNumber);
+        
     }
     public void EndTurn()
     {
         if (gamePhase == GamePhase.playerTurn)
         {
             Debug.Log("玩家回合結束，進入敵方回合");
+            EnemyActionManager.Action();
             gamePhase = GamePhase.enemyTurn;
         }
         else if (gamePhase == GamePhase.enemyTurn)
