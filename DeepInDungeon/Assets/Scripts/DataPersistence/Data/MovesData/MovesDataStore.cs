@@ -46,9 +46,14 @@ public class MovesDataStore : MonoBehaviour
             string name = rowArray[1];
             int cost = int.Parse(rowArray[2]);
             string discription = rowArray[3];
+            bool aim = false;
+            if (rowArray[4].Trim() == "1")
+            {
+                aim = true;
+            }
 
 
-            Moves move = new Moves(id, name, discription, cost);
+            Moves move = new Moves(id, name, discription, cost,aim);
             //創建為指定武器的
             MovesList.Add(move);
 

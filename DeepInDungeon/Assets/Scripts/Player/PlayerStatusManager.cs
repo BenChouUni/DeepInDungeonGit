@@ -1,10 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// 戰鬥時的玩家數值
+/// </summary>
 public class PlayerStatusManager : MonoBehaviour,IDataPersistence
 {
     public PlayerStatus playerStatus;
+
+    public int shield;
+    public ShieldDisplay shieldDisplay;
+    public int maxEnergy = 3;
+    public int energy;
+    public EnergyDisplay energyDisplay;
+
     public PlayerStatusDisplay playerStatusDisplay;
 
 
@@ -44,9 +53,11 @@ public class PlayerStatusManager : MonoBehaviour,IDataPersistence
             playerStatus.hpStatus.hp = 0;
         }
     }
-    private void UpdateDisplay()
+    public void UpdateDisplay()
     {
         playerStatusDisplay.playerStatus = playerStatus;
         playerStatusDisplay.UpdatePlayerStatus();
+        shieldDisplay.SetShield(shield);
+        energyDisplay.SetMaxEnergy(maxEnergy);
     }
 }

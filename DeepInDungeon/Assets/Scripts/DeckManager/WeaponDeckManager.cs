@@ -14,6 +14,8 @@ public class WeaponDeckManager : MonoBehaviour,IDataPersistence
     public PlayerWeapon playerWeapon;
     //行動管理器
     public MovesDeckManager mdManager;
+    //button manager
+    public DeckButtonManager DBManager;
     //武器擺放空間
     public GameObject mainWeaponZone;
     private Weapon mainWeapon;
@@ -22,7 +24,12 @@ public class WeaponDeckManager : MonoBehaviour,IDataPersistence
         get { return mainWeapon; }
         set
         {
+            if (value == mainWeapon)
+            {//如果沒改變就直接跳出，也不用再生成一次卡牌
+                return;
+            }
             this.mainWeapon = value;
+            DBManager.HideButton();
             if (value == null)
             {
                 Debug.Log("主武器被移除");
@@ -54,7 +61,12 @@ public class WeaponDeckManager : MonoBehaviour,IDataPersistence
         get { return secWeapon; }
         set
         {
+            if (value == secWeapon)
+            {
+                return;
+            }
             this.secWeapon = value;
+            DBManager.HideButton();
             if (value == null)
             {
                 Debug.Log("副武器被移除");

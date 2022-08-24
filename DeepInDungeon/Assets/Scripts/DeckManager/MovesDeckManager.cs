@@ -157,7 +157,7 @@ public class MovesDeckManager : MonoBehaviour,IDataPersistence
         {
             Moves move = movesDataStore.FindMovesByIndex(MovesIndexList[i]);
             //避免引用重複
-            Moves newMove = new Moves(move.id, move.name, move.cardDescription, move.cost, weapon.name);
+            Moves newMove = new Moves(move.id, move.name, move.cardDescription, move.cost, move.aim, weapon.name);
             //move.weaponName = weapon.name;//在此加入武器名
             list.Add(newMove);
         }

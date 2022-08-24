@@ -50,19 +50,21 @@
      <Compile Include="Assets\Scripts\BattleManagers\WeaponBattleManager.cs" />
      <Compile Include="Assets\Scripts\Draggable.cs" />
      <Compile Include="Assets\Scripts\BaseClass\HpStatus.cs" />
+     <Compile Include="Assets\Scripts\HealthBar.cs" />
      <Compile Include="Assets\Scripts\Moves\Moves.cs" />
      <Compile Include="Assets\Scripts\WeaponPanelDropZone.cs" />
      <Compile Include="Assets\Scripts\BattleManagers\PlayerMovesDeckManager.cs" />
      <Compile Include="Assets\Scripts\BattleManagers\EnemyStatusManager.cs" />
      <Compile Include="Assets\Scripts\BaseClass\DropZone.cs" />
      <Compile Include="Assets\Scripts\DataPersistence\Data\PlayerData\PlayerWeapon.cs" />
+     <Compile Include="Assets\Scripts\BattleManagers\EnemyActionManager.cs" />
      <Compile Include="Assets\Scripts\DeckManager\CheckMovesSceneManager.cs" />
      <Compile Include="Assets\Scripts\BaseClass\ZoomUI.cs" />
-     <Compile Include="Assets\Scripts\BaseClass\StatusClass.cs" />
      <Compile Include="Assets\Scripts\Weapon\Weapon.cs" />
      <Compile Include="Assets\Scripts\DataPersistence\Data\EnemyData\EnemyDatamanager.cs" />
      <Compile Include="Assets\Scripts\CardDisplay.cs" />
      <Compile Include="Assets\Scripts\DeckManager\DeckButtonManager.cs" />
+     <Compile Include="Assets\Scripts\ShieldDisplay.cs" />
      <Compile Include="Assets\Scripts\DataPersistence\DataPersistenceManager.cs" />
      <Compile Include="Assets\Scripts\BaseClass\Card.cs" />
      <Compile Include="Assets\Scripts\BaseClass\Part.cs" />
@@ -70,6 +72,7 @@
      <Compile Include="Assets\Scripts\DeckManager\WeaponDeckManager.cs" />
      <Compile Include="Assets\Scripts\DataPersistence\Data\MovesData\MovesDataStore.cs" />
      <Compile Include="Assets\Scripts\DeckManager\MovesDeckManager.cs" />
+     <Compile Include="Assets\Scripts\EnergyDisplay.cs" />
      <Compile Include="Assets\Scripts\Moves\MovesCardDisplay.cs" />
      <Compile Include="Assets\Scripts\DeckManager\PlayerMovesManager.cs" />
      <Compile Include="Assets\Scripts\Arrow.cs" />
@@ -80,6 +83,7 @@
      <Compile Include="Assets\Scripts\Player\PlayerStatusDisplay.cs" />
      <Compile Include="Assets\Scripts\DataPersistence\Data\PlayerData\PlayerStatus.cs" />
      <Compile Include="Assets\Scripts\DataPersistence\IDataPersistence.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerStatusManager.cs" />
      <Compile Include="Assets\Scripts\Point.cs" />
      <Compile Include="Assets\Scripts\Weapon\WeaponDisplay.cs" />
      <Compile Include="Assets\Scripts\CardAimByArrow.cs" />
@@ -87,9 +91,6 @@
      <Compile Include="Assets\Scripts\DataPersistence\Data\GameData.cs" />
      <Compile Include="Assets\Scripts\BattleManagers\OrderHandCard.cs" />
      <Compile Include="Assets\Scripts\DeckManager\DeckSceneManager.cs" />
-     <Compile Include="Assets\Scripts\BattleManagers\EnemyActionManager.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerStatusManager.cs" />
-     <Compile Include="Assets\Scripts\healthBar.cs" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.20f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

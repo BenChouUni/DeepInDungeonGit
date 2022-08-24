@@ -10,10 +10,13 @@ public class DeckButtonManager : MonoBehaviour
     private void Start()
     {
         //開場隱藏進入戰鬥按鈕
-        startBattleButton.SetActive(false);
+        HideButton();
         
     }
-
+    public void HideButton()
+    {
+        startBattleButton.SetActive(false);
+    }
     public void ShowButton()
     {
         startBattleButton.SetActive(true);

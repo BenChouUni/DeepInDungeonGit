@@ -27,6 +27,7 @@ public class BattleManager : MonoBehaviour
 
     private void Start()
     {
+        //Debug.Log(Application.persistentDataPath);
         GameStart();
     }
 
@@ -43,7 +44,8 @@ public class BattleManager : MonoBehaviour
         
         weaponBattleManager.ShowWeapon();
 
-        playerMovesDeckManager.ShuffleMoves(); 
+        playerMovesDeckManager.ShuffleMoves();
+        playerStatusManager.UpdateDisplay();
         enemyStatusManager.ShowEnemyStatus();
 
 

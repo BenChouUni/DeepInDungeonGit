@@ -65,7 +65,7 @@ public class PlayerMovesDeckManager : MonoBehaviour,IDataPersistence
             int j = random.Next(i, playerDeck.Count);
             Moves temp = playerDeck[i];
             playerDeck[i] = playerDeck[j];
-            playerDeck[j] = playerDeck[i];
+            playerDeck[j] = temp;
         }
     }
 
