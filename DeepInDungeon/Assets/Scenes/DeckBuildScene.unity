@@ -1784,6 +1784,7 @@ MonoBehaviour:
       Defense: 0
       slotNumber: 0
   mdManager: {fileID: 445996809}
+  DBManager: {fileID: 554360258}
   mainWeaponZone: {fileID: 904014099}
   secondaryWeaponZone: {fileID: 36975430}
 --- !u!4 &1142570259

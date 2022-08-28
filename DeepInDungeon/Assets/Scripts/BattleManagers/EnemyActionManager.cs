@@ -12,7 +12,7 @@ public class EnemyActionManager : MonoBehaviour
     public Text actionShow;
     public Image actionIcon;
     //manager
-    public BattleManager battleManager;
+    
 
     public void Action()
     {
@@ -29,14 +29,14 @@ public class EnemyActionManager : MonoBehaviour
     //攻擊
     public void Attack(int dmg)
     {
-
-        battleManager.playerStatusManager.RecieveDamage(dmg);
+        BattleManager.Instance.playerStatusManager.RecieveDamage(dmg);
+        
     }
     public void Attack(int dmg,int time)
     {
         for (int i = 0; i < time; i++)
         {
-            battleManager.playerStatusManager.RecieveDamage(dmg);
+            BattleManager.Instance.playerStatusManager.RecieveDamage(dmg);
         }
         
     }

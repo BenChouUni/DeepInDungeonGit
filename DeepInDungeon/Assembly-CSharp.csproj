@@ -52,7 +52,7 @@
      <Compile Include="Assets\Scripts\BaseClass\HpStatus.cs" />
      <Compile Include="Assets\Scripts\HealthBar.cs" />
      <Compile Include="Assets\Scripts\Moves\Moves.cs" />
-     <Compile Include="Assets\Scripts\WeaponPanelDropZone.cs" />
+     <Compile Include="Assets\Scripts\DeckManager\WeaponPanelDropZone.cs" />
      <Compile Include="Assets\Scripts\BattleManagers\PlayerMovesDeckManager.cs" />
      <Compile Include="Assets\Scripts\BattleManagers\EnemyStatusManager.cs" />
      <Compile Include="Assets\Scripts\BaseClass\DropZone.cs" />
@@ -62,13 +62,13 @@
      <Compile Include="Assets\Scripts\BaseClass\ZoomUI.cs" />
      <Compile Include="Assets\Scripts\Weapon\Weapon.cs" />
      <Compile Include="Assets\Scripts\DataPersistence\Data\EnemyData\EnemyDatamanager.cs" />
-     <Compile Include="Assets\Scripts\CardDisplay.cs" />
+     <Compile Include="Assets\Scripts\BaseClass\Card\CardDisplay.cs" />
      <Compile Include="Assets\Scripts\DeckManager\DeckButtonManager.cs" />
      <Compile Include="Assets\Scripts\ShieldDisplay.cs" />
      <Compile Include="Assets\Scripts\DataPersistence\DataPersistenceManager.cs" />
      <Compile Include="Assets\Scripts\BaseClass\Card.cs" />
      <Compile Include="Assets\Scripts\BaseClass\Part.cs" />
-     <Compile Include="Assets\Scripts\WeaponDropZone.cs" />
+     <Compile Include="Assets\Scripts\DeckManager\WeaponDropZone.cs" />
      <Compile Include="Assets\Scripts\DeckManager\WeaponDeckManager.cs" />
      <Compile Include="Assets\Scripts\DataPersistence\Data\MovesData\MovesDataStore.cs" />
      <Compile Include="Assets\Scripts\DeckManager\MovesDeckManager.cs" />
@@ -77,20 +77,23 @@
      <Compile Include="Assets\Scripts\DeckManager\PlayerMovesManager.cs" />
      <Compile Include="Assets\Scripts\Arrow.cs" />
      <Compile Include="Assets\Scripts\DataPersistence\FileDataHandler.cs" />
-     <Compile Include="Assets\Scripts\ScrollManager.cs" />
+     <Compile Include="Assets\Scripts\DeckManager\ScrollManager.cs" />
      <Compile Include="Assets\Scripts\Moves\CheckHandCard.cs" />
+     <Compile Include="Assets\Scripts\BattleManagers\AttackTarget.cs" />
      <Compile Include="Assets\Scripts\BattleManagers\BattleManager.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerStatusDisplay.cs" />
      <Compile Include="Assets\Scripts\DataPersistence\Data\PlayerData\PlayerStatus.cs" />
      <Compile Include="Assets\Scripts\DataPersistence\IDataPersistence.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerStatusManager.cs" />
+     <Compile Include="Assets\Scripts\BattleManagers\PlayerStatusManager.cs" />
      <Compile Include="Assets\Scripts\Point.cs" />
      <Compile Include="Assets\Scripts\Weapon\WeaponDisplay.cs" />
      <Compile Include="Assets\Scripts\CardAimByArrow.cs" />
      <Compile Include="Assets\Scripts\BaseClass\Enemy.cs" />
      <Compile Include="Assets\Scripts\DataPersistence\Data\GameData.cs" />
      <Compile Include="Assets\Scripts\BattleManagers\OrderHandCard.cs" />
+     <Compile Include="Assets\Scripts\Singleton\MonoSingleton.cs" />
      <Compile Include="Assets\Scripts\DeckManager\DeckSceneManager.cs" />
+     <Compile Include="Assets\Scripts\BattleManagers\BattleMoveCard.cs" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.20f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

@@ -56,7 +56,7 @@ public class PlayerStatusDisplay : MonoBehaviour, IDataPersistence
         }
         healthBar.SetMaxHealth(hpStatus.hpMax);
         healthBar.SetHealth(hpStatus.hp);
-        healthBar.SetText(hpStatus.hp,hpStatus.hpMax);
+        
 
     }
 

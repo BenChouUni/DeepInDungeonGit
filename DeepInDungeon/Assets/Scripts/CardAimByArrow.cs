@@ -13,7 +13,7 @@ public class CardAimByArrow : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndD
         {
             return;
         }
-        if (BattleManager.gamePhase == GamePhase.playerTurn)
+        if (BattleManager.Instance.gamePhase == GamePhase.playerTurn)
         {
             Arrow.startPoint = this.transform.position;
             Arrow._Show = true;

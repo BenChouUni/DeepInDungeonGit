@@ -10,7 +10,7 @@ public enum GamePhase
     gameEnd
 }
 
-public class BattleManager : MonoBehaviour
+public class BattleManager : MonoSingleton<BattleManager>
 {
     public  Text GamePhaseShow;
     //
@@ -21,7 +21,10 @@ public class BattleManager : MonoBehaviour
     //acction manager
     public EnemyActionManager EnemyActionManager;
     
-    public static GamePhase gamePhase = GamePhase.gameStart;
+    public GamePhase gamePhase = GamePhase.gameStart;
+    //輔助變量
+    private Moves attackingMove;//準備發起攻擊的武器
+    public static bool attackingPrepare;
     [SerializeField]
     private int drawNumber;
 
@@ -41,6 +44,7 @@ public class BattleManager : MonoBehaviour
     {
         gamePhase = GamePhase.gameStart;
 
+        attackingPrepare = false;
         
         weaponBattleManager.ShowWeapon();
 
@@ -85,5 +89,30 @@ public class BattleManager : MonoBehaviour
     public void EndBattle()
     {
         gamePhase = GamePhase.gameEnd;
+    }
+
+    public void PlayerAttackRequest(Moves moves)
+    {
+        if (gamePhase != GamePhase.playerTurn)
+        {
+            Debug.Log("不是玩家回合，不可以發動攻擊");
+            return;
+        }
+
+        attackingMove = moves;
+        attackingPrepare = true;
+    }
+
+    public void PlayerAttackConfirm()
+    {
+        AttackEnemy(5);
+
+        attackingPrepare = false;
+    }
+
+    public void AttackEnemy(int dmg)
+    {
+        enemyStatusManager.RecieveDamage(dmg);
+       
     }
 }

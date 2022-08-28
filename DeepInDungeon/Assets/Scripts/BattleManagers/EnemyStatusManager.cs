@@ -7,8 +7,9 @@ public class EnemyStatusManager : MonoBehaviour
 {
     public Enemy enemyStatus;
 
+    public HealthBar healthBar;
     public Text enemyName;
-    public Text enemyHealth;
+    
 
    
     void Start()
@@ -20,9 +21,8 @@ public class EnemyStatusManager : MonoBehaviour
     public void ShowEnemyStatus()
     {
         enemyName.text = enemyStatus.name;
-        int maxHealth = enemyStatus.hpStatus.hpMax;
-        int hp = enemyStatus.hpStatus.hp;
-        enemyHealth.text = hp.ToString() + "/" + maxHealth.ToString();
+        healthBar.SetMaxHealth(enemyStatus.hpStatus.hpMax);
+        healthBar.SetHealth(enemyStatus.hpStatus.hp);
     }
 
     public void RecieveDamage(int dmg)

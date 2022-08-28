@@ -1,26 +1,27 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/PlayerStatusDisplay.cs">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BattleManagers/BattleMoveCard.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player/PlayerStatusBattleManager.cs" Line="32" Column="1" IsPinned="True" />
-      <File FileName="Assets/Scripts/WeaponDropZone.cs" Line="41" Column="1" />
-      <File FileName="Assets/Scripts/WeaponPanelDropZone.cs" Line="4" Column="31" />
       <File FileName="Assets/Scripts/BattleManagers/WeaponBattleManager.cs" Line="29" Column="11" />
       <File FileName="Assets/Scripts/DataPersistence/Data/MovesData/MovesDataStore.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Moves/Moves.cs" Line="1" Column="1" />
       <File FileName="Assets/Data/CardByWeapon.csv" Line="1" Column="1" />
       <File FileName="Assets/Scripts/BattleManagers/PlayerMovesDeckManager.cs" Line="34" Column="1" />
-      <File FileName="Assets/Scripts/BattleManagers/BattleManager.cs" Line="71" Column="40" />
+      <File FileName="Assets/Scripts/BattleManagers/BattleManager.cs" Line="71" Column="6" />
       <File FileName="Assets/Scripts/BattleManagers/OrderHandCard.cs" Line="112" Column="32" />
       <File FileName="Assets/Scripts/Moves/CheckHandCard.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/BattleManagers/EnemyStatusManager.cs" Line="46" Column="26" />
       <File FileName="Assets/Scripts/BaseClass/HpStatus.cs" Line="9" Column="18" />
       <File FileName="Assets/Scripts/DataPersistence/Data/EnemyData/EnemyDatamanager.cs" Line="4" Column="17" />
       <File FileName="Assets/Scripts/Draggable.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/CardAimByArrow.cs" Line="23" Column="54" />
+      <File FileName="Assets/Scripts/CardAimByArrow.cs" Line="23" Column="6" />
       <File FileName="Assets/Scripts/BattleManagers/EnemyActionManager.cs" Line="19" Column="18" />
-      <File FileName="Assets/Scripts/Player/PlayerStatusDisplayManager.cs" Line="33" Column="39" />
       <File FileName="Assets/Scripts/Player/PlayerStatusManager.cs" Line="40" Column="6" />
       <File FileName="Assets/Scripts/healthBar.cs" Line="23" Column="12" />
+      <File FileName="Assets/Scripts/BaseClass/Card.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Singleton/MonoSingleton.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BattleManagers/BattleMoveCard.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -30,15 +31,16 @@
               <Node name="Assets" expanded="True">
                 <Node name="Scripts" expanded="True">
                   <Node name="BaseClass" expanded="True" />
-                  <Node name="BattleManagers" expanded="True" />
+                  <Node name="BattleManagers" expanded="True">
+                    <Node name="BattleMoveCard.cs" selected="True" />
+                  </Node>
                   <Node name="DataPersistence" expanded="True">
                     <Node name="Data" expanded="True">
                       <Node name="EnemyData" expanded="True" />
                     </Node>
                   </Node>
-                  <Node name="Player" expanded="True">
-                    <Node name="PlayerStatusDisplay.cs" selected="True" />
-                  </Node>
+                  <Node name="Moves" expanded="True" />
+                  <Node name="Player" expanded="True" />
                 </Node>
               </Node>
             </Node>
@@ -50,10 +52,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
