@@ -1,2 +1,2 @@
-﻿id,name,maxHp,atk
-0,木頭,30,0
+﻿id,name,species,speciesID,maxHp,atk
+0,Wood,Trees,0,50,0

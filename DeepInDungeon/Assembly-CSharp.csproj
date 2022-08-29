@@ -89,11 +89,12 @@
      <Compile Include="Assets\Scripts\Weapon\WeaponDisplay.cs" />
      <Compile Include="Assets\Scripts\CardAimByArrow.cs" />
      <Compile Include="Assets\Scripts\BaseClass\Enemy.cs" />
+     <Compile Include="Assets\Scripts\BattleManagers\BattleMoveCard.cs" />
      <Compile Include="Assets\Scripts\DataPersistence\Data\GameData.cs" />
      <Compile Include="Assets\Scripts\BattleManagers\OrderHandCard.cs" />
      <Compile Include="Assets\Scripts\Singleton\MonoSingleton.cs" />
      <Compile Include="Assets\Scripts\DeckManager\DeckSceneManager.cs" />
-     <Compile Include="Assets\Scripts\BattleManagers\BattleMoveCard.cs" />
+     <Compile Include="Assets\Scripts\BaseClass\NewBehaviourScript.cs" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.20f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
