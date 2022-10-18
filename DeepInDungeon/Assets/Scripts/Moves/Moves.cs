@@ -10,6 +10,7 @@ public class Moves : Card
     public string weaponName;
     public bool aim;
     //public Weapon weapon;
+    public List<MoveAction> actions;
 
 
     public Moves(int _id, string _name, string _description, int _cost,bool _aim, string _WeaponName) : base(_id, _name, _description)

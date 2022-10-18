@@ -22,7 +22,15 @@ public class BattleMoveCard : MonoBehaviour,IPointerUpHandler,IBeginDragHandler
         if (move.aim)
         {
             Debug.Log("準備攻擊");
-            BattleManager.Instance.PlayerAttackRequest(move);
+            BattleManager.Instance.PlayerAttackRequest(this,move);
         }
+    }
+
+    public void DiscardItself()
+    {
+        Arrow._Show = false;
+        BattleCardManager.Instance.discardDeck.Add(move);
+        Destroy(gameObject);
+        OrderHandCard.Instance.UpdateHandCard();
     }
 }

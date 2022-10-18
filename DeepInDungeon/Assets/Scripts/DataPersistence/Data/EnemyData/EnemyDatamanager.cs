@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-public class EnemyDatamanager : MonoBehaviour
+public class EnemyDataManager : MonoBehaviour
 {
     //各種對應csv，敵人列表，敵人種族對應部位列表，跟該種族全部位列表
     #region
@@ -17,10 +17,11 @@ public class EnemyDatamanager : MonoBehaviour
     #endregion
 
     //敵人狀態管理器
+    
     public EnemyStatusManager enemyStatusManager;
 
     [SerializeField]
-    public Enemy enemy;
+    private EnemyStatus enemy;
 
     // Start is called before the first frame update
     void Awake()
@@ -86,9 +87,9 @@ public class EnemyDatamanager : MonoBehaviour
                 int _maxHp = int.Parse(rowArray[3]);
                 PartType _partType = Part.FindPartTypeByText(rowArray[4].Trim());
 
-                Part part = new Part(_name,_maxHp,_partType);
+                Part part = new Part(_name,_maxHp,0,_partType);
                 //將部位加入部位列表
-                Debug.Log(part.name + "加入");
+                Debug.Log(part.Name + "加入");
                 returnParts.Add(part);
                 //刪掉partID第一個，才能往下檢索
                 partsIDs.RemoveAt(0);
@@ -120,17 +121,17 @@ public class EnemyDatamanager : MonoBehaviour
             }
 
             string name = rowArray[1];
-            Species species = Enemy.FindSpeciesByText(rowArray[2].Trim());
+            Species species = EnemyStatus.FindSpeciesByText(rowArray[2].Trim());
             int speciesID = int.Parse(rowArray[3]);
             int maxHp = int.Parse(rowArray[4]);
             int atk = int.Parse(rowArray[5]);
 
             List<Part> parts = FindParts(species, speciesID);
 
-            enemy = new Enemy(id, name, maxHp, atk,species,speciesID,parts); 
+            enemy = new EnemyStatus(id, name, maxHp, 0,atk,species,speciesID,parts); 
 
         }
-        if (enemy.name == null)
+        if (enemy.Name == null)
         {
             Debug.LogError("找不到敵人");
         }

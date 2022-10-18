@@ -165,6 +165,11 @@ public class WeaponDeckManager : MonoBehaviour,IDataPersistence
         Weapon main = playerWeapon.mainWeapon;
         Weapon sec = playerWeapon.secondaryWeapon;
 
+        if (main == null && sec == null)
+        {
+            return;
+        }
+
         if (main.hand != Weapon.Hand.Empty)
         {
 

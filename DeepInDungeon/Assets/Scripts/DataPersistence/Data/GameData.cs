@@ -5,17 +5,17 @@ using UnityEngine;
 [System.Serializable]
 public class GameData 
 {
+    public PlayerStatus playerStatus;
     public PlayerWeapon playerWeapon;
     public List<Moves> playerMovesDeck;
     
 
-    public PlayerStatus playerStatus;
-
     public GameData()
     {
         //初始化
-        this.playerWeapon = new PlayerWeapon(null, null);
+        this.playerStatus = new PlayerStatus();
+        this.playerWeapon = new PlayerWeapon();
         this.playerMovesDeck = new List<Moves>();
-        this.playerStatus = new PlayerStatus("無名氏",50,0);
+        
     }
 }

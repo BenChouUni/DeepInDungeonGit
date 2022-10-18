@@ -10,21 +10,15 @@ public enum PartType
 }
 
 [Serializable]
-public class Part
+public class Part:Unit
 {
-    
-    public string name;
-    public HpStatus hpStatus;
-    public int shield;
+
     public int endurance;
 
     public PartType partType;
     
-    public Part(string _name,int _maxHealth,PartType _partType)
+    public Part(string _name,int _maxHealth,int _shield,PartType _partType):base(_name,_maxHealth,_shield)
     {
-        name = _name;
-        hpStatus = new HpStatus(_maxHealth);
-        shield = 0;
         endurance = _maxHealth / 3;
         partType = _partType;
     }

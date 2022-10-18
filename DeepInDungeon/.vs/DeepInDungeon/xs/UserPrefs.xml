@@ -1,28 +1,29 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BaseClass/NewBehaviourScript.cs">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BaseClass/Unit/NewBehaviourScript.cs">
     <Files>
       <File FileName="Assets/Scripts/BattleManagers/WeaponBattleManager.cs" Line="29" Column="11" />
       <File FileName="Assets/Scripts/DataPersistence/Data/MovesData/MovesDataStore.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Moves/Moves.cs" Line="1" Column="1" />
       <File FileName="Assets/Data/CardByWeapon.csv" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BattleManagers/PlayerMovesDeckManager.cs" Line="34" Column="1" />
-      <File FileName="Assets/Scripts/BattleManagers/BattleManager.cs" Line="71" Column="6" />
-      <File FileName="Assets/Scripts/BattleManagers/OrderHandCard.cs" Line="112" Column="32" />
+      <File FileName="Assets/Scripts/BattleManagers/BattleManager.cs" Line="127" Column="37" />
+      <File FileName="Assets/Scripts/BattleManagers/OrderHandCard.cs" Line="15" Column="1" />
       <File FileName="Assets/Scripts/Moves/CheckHandCard.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BattleManagers/EnemyStatusManager.cs" Line="46" Column="26" />
-      <File FileName="Assets/Scripts/BaseClass/HpStatus.cs" Line="9" Column="18" />
-      <File FileName="Assets/Scripts/DataPersistence/Data/EnemyData/EnemyDatamanager.cs" Line="4" Column="17" />
+      <File FileName="Assets/Scripts/DataPersistence/Data/EnemyData/EnemyDatamanager.cs" Line="7" Column="30" />
       <File FileName="Assets/Scripts/Draggable.cs" Line="7" Column="19" />
-      <File FileName="Assets/Scripts/CardAimByArrow.cs" Line="23" Column="6" />
-      <File FileName="Assets/Scripts/BattleManagers/EnemyActionManager.cs" Line="19" Column="18" />
-      <File FileName="Assets/Scripts/healthBar.cs" Line="23" Column="12" />
+      <File FileName="Assets/Scripts/BattleManagers/EnemyActionManager.cs" Line="9" Column="23" />
+      <File FileName="Assets/Scripts/healthBar.cs" Line="11" Column="1" />
       <File FileName="Assets/Scripts/BaseClass/Card.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Singleton/MonoSingleton.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BattleManagers/BattleMoveCard.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BaseClass/Enemy.cs" Line="39" Column="24" />
-      <File FileName="Assets/Scripts/BaseClass/Part.cs" Line="31" Column="1" />
-      <File FileName="Assets/Scripts/BaseClass/NewBehaviourScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BattleManagers/BattleMoveCard.cs" Line="34" Column="49" />
+      <File FileName="Assets/Scripts/BaseClass/Part.cs" Line="32" Column="27" />
+      <File FileName="Assets/Scripts/BattleManagers/CommonAction.cs" Line="10" Column="8" />
+      <File FileName="Assets/Scripts/Player/PlayerStatusDisplay.cs" Line="37" Column="6" />
+      <File FileName="Assets/Scripts/Player/PlayerStatus.cs" Line="6" Column="1" />
+      <File FileName="Assets/Scripts/DataPersistence/Data/GameData.cs" Line="22" Column="1" />
+      <File FileName="Assets/Scripts/BaseClass/Unit/Unit.cs" Line="5" Column="21" />
+      <File FileName="Assets/Scripts/BaseClass/Unit/HpStatus.cs" Line="15" Column="16" />
+      <File FileName="Assets/Scripts/BaseClass/Unit/NewBehaviourScript.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -31,17 +32,11 @@
             <Node name="Assembly-CSharp" expanded="True">
               <Node name="Assets" expanded="True">
                 <Node name="Scripts" expanded="True">
-                  <Node name="BaseClass" expanded="True" />
-                  <Node name="BattleManagers" expanded="True">
-                    <Node name="BattleManager.cs" selected="True" />
-                  </Node>
-                  <Node name="DataPersistence" expanded="True">
-                    <Node name="Data" expanded="True">
-                      <Node name="EnemyData" expanded="True" />
+                  <Node name="BaseClass" expanded="True">
+                    <Node name="Unit" expanded="True">
+                      <Node name="Unit.cs" selected="True" />
                     </Node>
                   </Node>
-                  <Node name="Moves" expanded="True" />
-                  <Node name="Player" expanded="True" />
                 </Node>
               </Node>
             </Node>
@@ -51,11 +46,15 @@
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State />
       </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="DeepInDungeon" expanded="True" selected="True" />
+        </State>
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

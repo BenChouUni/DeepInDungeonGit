@@ -12,18 +12,22 @@ public enum GamePhase
 
 public class BattleManager : MonoSingleton<BattleManager>
 {
+    //回合控制
+    public GamePhase gamePhase = GamePhase.gameStart;
     public  Text GamePhaseShow;
-    //
-    public PlayerMovesDeckManager playerMovesDeckManager;
-    public WeaponBattleManager weaponBattleManager;
+    //manager
+    public BattleCardManager playerMovesDeckManager;
+    //public WeaponBattleManager weaponBattleManager;
     public EnemyStatusManager enemyStatusManager;
     public PlayerStatusManager playerStatusManager;
     //acction manager
     public EnemyActionManager EnemyActionManager;
+    //
     
-    public GamePhase gamePhase = GamePhase.gameStart;
     //輔助變量
-    private Moves attackingMove;//準備發起攻擊的武器
+    private Moves attackingMove;//準備發起攻擊的move
+    private Weapon attackingWeapon;
+    private BattleMoveCard attackingMoveCard;//發起攻擊牌的組件
     public static bool attackingPrepare;
     [SerializeField]
     private int drawNumber;
@@ -45,12 +49,14 @@ public class BattleManager : MonoSingleton<BattleManager>
         gamePhase = GamePhase.gameStart;
 
         attackingPrepare = false;
-        
-        weaponBattleManager.ShowWeapon();
+
+        WeaponBattleManager.Instance.ShowWeapon();
 
         playerMovesDeckManager.ShuffleMoves();
+
         playerStatusManager.UpdateDisplay();
-        enemyStatusManager.ShowEnemyStatus();
+        enemyStatusManager.UpdateDisplay();
+        
 
 
         PlayerTurnStart();
@@ -60,7 +66,7 @@ public class BattleManager : MonoSingleton<BattleManager>
     public void PlayerTurnStart()
     {
         gamePhase = GamePhase.playerTurn;
-        playerMovesDeckManager.CreateMovesCard(drawNumber);
+        playerMovesDeckManager.DrawCards(drawNumber);
     }
     public void PlayerTurnEnd()
     {
@@ -91,28 +97,36 @@ public class BattleManager : MonoSingleton<BattleManager>
         gamePhase = GamePhase.gameEnd;
     }
 
-    public void PlayerAttackRequest(Moves moves)
+    //攻擊
+
+    public void PlayerAttackRequest(BattleMoveCard _attackingMoveCard,Moves moves)
     {
         if (gamePhase != GamePhase.playerTurn)
         {
             Debug.Log("不是玩家回合，不可以發動攻擊");
             return;
         }
-
-        attackingMove = moves;
+        this.attackingMoveCard = _attackingMoveCard;
+        this.attackingMove = moves;
+        this.attackingWeapon = WeaponBattleManager.Instance.FindWeaponByName(moves.weaponName);
         attackingPrepare = true;
     }
 
     public void PlayerAttackConfirm()
     {
-        AttackEnemy(5);
+        if (attackingWeapon==null)
+        {
+            return;
+        }
+        AttackEnemy(attackingWeapon.Attack);
 
         attackingPrepare = false;
+        attackingWeapon = null;
     }
 
     public void AttackEnemy(int dmg)
     {
-        enemyStatusManager.RecieveDamage(dmg);
-       
+        enemyStatusManager.enemyStatus.GetDamage(dmg);
+        attackingMoveCard.DiscardItself();
     }
 }

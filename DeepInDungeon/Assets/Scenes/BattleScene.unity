@@ -231,7 +231,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 878494962}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5535641
 MonoBehaviour:
@@ -245,13 +245,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d96f3df77bc64608bdb8ce20a7b0aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gamePhase: 0
   GamePhaseShow: {fileID: 1844157210}
   playerMovesDeckManager: {fileID: 206018730}
-  weaponBattleManager: {fileID: 253821514}
   enemyStatusManager: {fileID: 447634022}
   playerStatusManager: {fileID: 904749046}
   EnemyActionManager: {fileID: 1081797060}
-  gamePhase: 0
   drawNumber: 5
 --- !u!1 &6681893
 GameObject:
@@ -444,38 +443,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 27934626}
   m_CullTransparentMesh: 1
---- !u!1 &72662331
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 72662332}
-  m_Layer: 0
-  m_Name: Enemy
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &72662332
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 72662331}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1326288357}
-  - {fileID: 447634021}
-  m_Father: {fileID: 878494962}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &135873008
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,7 +746,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -150, y: 176}
+  m_AnchoredPosition: {x: -17, y: 147.89}
   m_SizeDelta: {x: 256.2754, y: 104.2123}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &190825612
@@ -804,11 +771,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 44
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
-    m_MaxSize: 44
+    m_MaxSize: 60
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -835,7 +802,7 @@ GameObject:
   - component: {fileID: 206018731}
   - component: {fileID: 206018730}
   m_Layer: 0
-  m_Name: PlayerMovesManager
+  m_Name: MoveCardManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -872,7 +839,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 878494962}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &244410116 stripped
 RectTransform:
@@ -908,7 +875,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 878494962}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &253821514
 MonoBehaviour:
@@ -1304,6 +1271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 447634021}
   - component: {fileID: 447634022}
+  - component: {fileID: 447634023}
   m_Layer: 0
   m_Name: EnemyStatusManager
   m_TagString: Untagged
@@ -1318,11 +1286,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 447634020}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 72662332}
+  m_Father: {fileID: 878494962}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &447634022
@@ -1337,8 +1305,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5a7b28c5117f4524b8971fa91cc28dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyStatus: {fileID: 0}
   healthBar: {fileID: 1373154650}
   enemyName: {fileID: 190825612}
+  enemyStatusDisplay: {fileID: 0}
+--- !u!114 &447634023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447634020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1003d24efbfb54f67831d1b4ce02c2cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: {fileID: 190825612}
+  healthBar: {fileID: 1373154650}
+  shieldText: {fileID: 619520432}
 --- !u!1 &468057506
 GameObject:
   m_ObjectHideFlags: 0
@@ -1678,6 +1663,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &619520432 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8395792739362663854, guid: 6bd8863f7477d409ca6e3384b7c8ed2f, type: 3}
+  m_PrefabInstance: {fileID: 480013614}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &632034689
 GameObject:
   m_ObjectHideFlags: 0
@@ -1743,7 +1739,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb945a08c96e477b98f59a8dd5a63f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shieldText: {fileID: 258260907}
 --- !u!1 &755301997
 GameObject:
   m_ObjectHideFlags: 0
@@ -1928,11 +1923,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 904749044}
+  - {fileID: 447634021}
   - {fileID: 1649000601}
   - {fileID: 253821513}
   - {fileID: 206018731}
   - {fileID: 5535640}
-  - {fileID: 72662332}
+  - {fileID: 1326288357}
   - {fileID: 1404667746}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -1946,8 +1942,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 904749044}
-  - component: {fileID: 904749045}
   - component: {fileID: 904749046}
+  - component: {fileID: 904749045}
   m_Layer: 0
   m_Name: PlayerStatusManager
   m_TagString: Untagged
@@ -1981,16 +1977,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86428db5e0c614d5aa3fc7acc6115833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStatus:
-    playerName: 
-    hpStatus:
-      hp: 0
-      hpMax: 0
-    coin: 0
+  playerStatus: {fileID: 0}
   playerName:
   - {fileID: 1600790894}
   healthBar: {fileID: 1057556347}
-  coinText: []
+  shieldText: {fileID: 258260907}
+  coinText: {fileID: 0}
 --- !u!114 &904749046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2003,18 +1995,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb4636dc162145acb2d861df48eaca4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStatus:
-    playerName: 
-    hpStatus:
-      hp: 0
-      hpMax: 0
-    coin: 0
-  shield: 0
-  shieldDisplay: {fileID: 632034692}
-  maxEnergy: 3
-  energy: 0
+  playerStatus: {fileID: 0}
   energyDisplay: {fileID: 632034691}
-  playerStatusDisplay: {fileID: 904749045}
+  playerStatusDisplay: {fileID: 0}
 --- !u!1 &910781793
 GameObject:
   m_ObjectHideFlags: 0
@@ -2443,6 +2426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b8b5120d749b4bee94871f24c6214a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
   actionShow: {fileID: 0}
   actionIcon: {fileID: 0}
 --- !u!1 &1097193218
@@ -2679,12 +2663,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1326288356}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 72662332}
-  m_RootOrder: 0
+  m_Father: {fileID: 878494962}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1326288358
 MonoBehaviour:
@@ -2699,7 +2683,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyList: {fileID: 4900000, guid: 5e3d1ea469c8c4014b5fbdbf03e9cc21, type: 3}
+  FindSpeciesParts: {fileID: 4900000, guid: 6099863cf0091483daba2fcd2b614999, type: 3}
+  TreesPartsList: {fileID: 4900000, guid: a37db5f1c86e64435b84e52e41c0b75c, type: 3}
   enemyStatusManager: {fileID: 447634022}
+  enemy: {fileID: 0}
 --- !u!1 &1345530089
 GameObject:
   m_ObjectHideFlags: 0
@@ -2793,7 +2780,7 @@ Transform:
   m_Children:
   - {fileID: 1081797059}
   m_Father: {fileID: 878494962}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1478626107
 GameObject:
@@ -3285,7 +3272,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 878494962}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1649000602
 MonoBehaviour:
@@ -3624,13 +3611,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 206018730}
-        m_TargetAssemblyTypeName: PlayerMovesDeckManager, Assembly-CSharp
-        m_MethodName: CreateMovesCard
+        m_TargetAssemblyTypeName: BattleCardManager, Assembly-CSharp
+        m_MethodName: DrawCards
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3707,7 +3694,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28, y: 387.84}
+  m_AnchoredPosition: {x: 105.5, y: 487.84}
   m_SizeDelta: {x: 373, y: 104.3236}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1844157210

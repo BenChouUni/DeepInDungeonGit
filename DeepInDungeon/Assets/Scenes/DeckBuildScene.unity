@@ -339,7 +339,6 @@ Transform:
   - {fileID: 445996810}
   - {fileID: 648281934}
   - {fileID: 554360257}
-  - {fileID: 1245621628}
   - {fileID: 440331558}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -799,7 +798,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 46132750}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &440331559
 MonoBehaviour:
@@ -1891,7 +1890,7 @@ GameObject:
   - component: {fileID: 1245621628}
   - component: {fileID: 1245621629}
   m_Layer: 0
-  m_Name: PlayerStatusManager
+  m_Name: PlayerStatusDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1904,11 +1903,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1245621627}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1044.4521, y: 613.9727, z: -71.77615}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 46132750}
+  m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1245621629
@@ -1923,17 +1922,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86428db5e0c614d5aa3fc7acc6115833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStatus:
-    playerName: 
-    hpStatus:
-      hp: 0
-      hpMax: 0
-    coin: 0
+  playerStatus: {fileID: 0}
   playerName:
   - {fileID: 1020716955}
   healthBar: {fileID: 2015594082}
-  coinText:
-  - {fileID: 1072393639}
+  shieldText: {fileID: 0}
+  coinText: {fileID: 1072393639}
 --- !u!1 &1367138911
 GameObject:
   m_ObjectHideFlags: 0
@@ -2565,7 +2559,6 @@ GameObject:
   - component: {fileID: 1821650992}
   - component: {fileID: 1821650995}
   - component: {fileID: 1821650994}
-  - component: {fileID: 1821650993}
   m_Layer: 5
   m_Name: PlayerStatus
   m_TagString: Untagged
@@ -2595,18 +2588,6 @@ RectTransform:
   m_AnchoredPosition: {x: -270, y: -185}
   m_SizeDelta: {x: 480, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1821650993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1821650991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766f86ff58be64a63bc44ea05949a49f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1821650994
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class MovesDataStore : MonoBehaviour
+public class MovesDataStore
 {
     public List<Moves> allMovesList;
     

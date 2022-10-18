@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyActionManager : MonoBehaviour
+public class EnemyActionManager : MonoSingleton<EnemyActionManager>
 {
     //敵人
-    public Enemy enemy;
+    public EnemyStatus enemy;
 
     //動作標示
     public Text actionShow;
@@ -16,7 +16,7 @@ public class EnemyActionManager : MonoBehaviour
 
     public void Action()
     {
-        Attack(10);
+        EndAction();
     }
     /// <summary>
     ///  展示出敵人下回合的攻擊
@@ -27,22 +27,14 @@ public class EnemyActionManager : MonoBehaviour
         
     }
     //攻擊
-    public void Attack(int dmg)
-    {
-        BattleManager.Instance.playerStatusManager.RecieveDamage(dmg);
-        
-    }
-    public void Attack(int dmg,int time)
-    {
-        for (int i = 0; i < time; i++)
-        {
-            BattleManager.Instance.playerStatusManager.RecieveDamage(dmg);
-        }
-        
-    }
+
     //給自己護盾
     public void Shield()
     {
 
+    }
+    public void EndAction()
+    {
+        BattleManager.Instance.gamePhase = GamePhase.playerTurn;
     }
 }

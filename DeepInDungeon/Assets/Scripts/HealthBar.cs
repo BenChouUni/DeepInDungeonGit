@@ -8,30 +8,16 @@ public class HealthBar : MonoBehaviour
     public Slider slider;
     public Text healthText;
 
-    private HpStatus hpStatus;
-    
 
-    public void SetMaxHealth(int maxHp)
-    {
-        hpStatus = new HpStatus(maxHp);
-        slider.maxValue = maxHp;
-        slider.value = maxHp;
-        SetText();
-        
-    }
 
-    public void SetHealth(int hp)
+    //更改血條顯示
+    public void ShowHealthBar(HpStatus hpStatus)
     {
-        hpStatus.hp = hp;
-        slider.value = hp;
-        SetText();
-    }
+        slider.maxValue = hpStatus.hpMax;
+        slider.value = hpStatus.hp;
 
-    public void SetText()
-    {
         string max = hpStatus.hpMax.ToString();
         string current = hpStatus.hp.ToString();
         healthText.text = current + "/" + max;
-
     }
 }

@@ -235,6 +235,7 @@ MonoBehaviour:
     cardDescription: 
     cost: 0
     weaponName: 
+    aim: 0
 --- !u!1 &3400538111312245730
 GameObject:
   m_ObjectHideFlags: 0

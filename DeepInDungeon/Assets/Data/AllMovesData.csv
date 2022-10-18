@@ -1,4 +1,4 @@
-﻿id,name,cost,Description,ain
+﻿id,name,cost,Description,IsAttack
 0,攻擊,1,造成武器傷攻擊力+2的傷害,1
 1,防禦,1,獲得武器防禦+2的護盾值,0
 2,橫掃,2,對一個部位以及前後兩個部位造成武器攻擊的傷害,1

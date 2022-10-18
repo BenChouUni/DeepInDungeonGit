@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class OrderHandCard : MonoBehaviour
+public class OrderHandCard : MonoSingleton<OrderHandCard>
 {
     
 
@@ -25,7 +25,7 @@ public class OrderHandCard : MonoBehaviour
             if (child.gameObject.GetComponent<MovesCardDisplay>()!=null)
             {
                 newList.Add(child.gameObject);
-                Debug.Log("找到"+child.name);
+
             }
         }
         this.handCardList = newList;

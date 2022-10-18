@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponBattleManager : MonoBehaviour,IDataPersistence
+public class WeaponBattleManager : MonoSingleton<WeaponBattleManager>,IDataPersistence
 {
     public GameObject weaponPrefab;
     public Transform mainWeaponZone;
@@ -23,7 +23,7 @@ public class WeaponBattleManager : MonoBehaviour,IDataPersistence
     // Start is called before the first frame update
     void Start()
     {
-        //ShowWeapon();
+        
     }
 
     public void ShowWeapon()
@@ -39,5 +39,23 @@ public class WeaponBattleManager : MonoBehaviour,IDataPersistence
             secWeapon.transform.SetParent(secWeaponZone, false);
             secWeapon.GetComponent<WeaponDisplay>().weapon = playerWeapon.secondaryWeapon;
         }
+    }
+    /// <summary>
+    /// 因為move只存武器名字，所以需要透過此方法來找武器，未來可能會改move的東西
+    /// </summary>
+    /// <param name="weaponName"></param>
+    /// <returns></returns>
+    public Weapon FindWeaponByName(string weaponName)
+    {
+        if (playerWeapon.mainWeapon.name == weaponName)
+        {
+            return playerWeapon.mainWeapon;
+        }
+        else if (playerWeapon.secondaryWeapon.name == weaponName)
+        {
+            return playerWeapon.secondaryWeapon;
+        }
+        Debug.LogError("無法透過move名字找到對應武器");
+        return null;
     }
 }

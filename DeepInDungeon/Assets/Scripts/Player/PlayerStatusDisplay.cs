@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 /// <summary>
-/// 工具程式用來顯示玩家狀態
+/// 顯示玩家狀態用 可以自動調用也可以被調用
 /// </summary>
 public class PlayerStatusDisplay : MonoBehaviour, IDataPersistence
 {
@@ -11,54 +11,43 @@ public class PlayerStatusDisplay : MonoBehaviour, IDataPersistence
 
     #region
     public List<Text> playerName;
-    
     public HealthBar healthBar;
-    public List<Text> coinText;
+    public Text shieldText;
+    public Text coinText;
 
     #endregion
     private void Start()
     {
+        if (playerStatus == null)
+        {
+            Debug.LogError("找不到玩家資料");
+        }
+        //Debug.Log("名字" + playerStatus.Name);
+        InitialPlayerStatus(playerStatus);
+
+
+    }
+    public void InitialPlayerStatus(PlayerStatus _playerStatus)
+    {
         foreach (Text text in playerName)
         {
-            ShowName(text, playerStatus.playerName);
+            Unit.ShowUnit(_playerStatus, text, healthBar, shieldText);
         }
-        
-        UpdatePlayerStatus();
+        ShowCoin(coinText, _playerStatus.Coin);
     }
     /// <summary>
-    /// 更新時不會檢查名字
+    /// 更新狀態 名字不會更新
     /// </summary>
-    public void UpdatePlayerStatus()
+    public void UpdatePlayerStatus(PlayerStatus _playerStatus)
     {
-        ShowHp(playerStatus.hpStatus);
+        Unit.UpdateUnitStatus(_playerStatus, healthBar, shieldText);
 
-        foreach (Text text in coinText)
-        {
-            ShowCoin(text, playerStatus.coin);
-        }
-    }
-
-    private void ShowName(Text nameText,string playerName)
-    {
-        if (nameText == null)
-        {
-            return;
-        }
-        nameText.text = playerName;
-
-    }
-
-    private void ShowHp(HpStatus hpStatus)
-    {
-        if (healthBar == null)
-        {
-            return;
-        }
-        healthBar.SetMaxHealth(hpStatus.hpMax);
-        healthBar.SetHealth(hpStatus.hp);
+        ShowCoin(coinText, _playerStatus.Coin);
         
-
     }
+
+
+   
 
     private void ShowCoin(Text numText,int coinNum)
     {
