@@ -18,16 +18,10 @@ public class EnemyDataManager : MonoBehaviour
 
     //敵人狀態管理器
     
-    public EnemyStatusManager enemyStatusManager;
+    //public EnemyStatusManager enemyStatusManager;
 
-    [SerializeField]
     private EnemyStatus enemy;
 
-    // Start is called before the first frame update
-    void Awake()
-    {
-        LoadCertainEnemy(0);
-    }
 
     private TextAsset FindSpeciesPartsList(Species _species)
     {
@@ -107,7 +101,7 @@ public class EnemyDataManager : MonoBehaviour
         return returnParts;
     }
 
-    public void LoadCertainEnemy(int id)
+    public EnemyStatus LoadCertainEnemy(int id)
     {
         string[] dataRow = EnemyList.text.Split('\n');
         
@@ -126,18 +120,19 @@ public class EnemyDataManager : MonoBehaviour
             int maxHp = int.Parse(rowArray[4]);
             int atk = int.Parse(rowArray[5]);
 
-            List<Part> parts = FindParts(species, speciesID);
+            //List<Part> parts = FindParts(species, speciesID);
 
-            enemy = new EnemyStatus(id, name, maxHp, 0,atk,species,speciesID,parts); 
+            enemy = new EnemyStatus(id, name, maxHp, 0,atk,species,speciesID); 
 
         }
         if (enemy.Name == null)
         {
             Debug.LogError("找不到敵人");
+            return null;
         }
         else
         {
-            enemyStatusManager.enemyStatus = enemy;
+            return enemy;
         }
         
     }

@@ -7,18 +7,24 @@ using UnityEngine.UI;
 /// <summary>
 /// 玩家以及敵人部位等主要互動單位
 /// </summary>
+[Serializable]
 public abstract class Unit
-{ 
+{
+    [SerializeField]
     private string unitName;
     public string Name { get { return unitName; } }//名字不該隨便變動
+    [SerializeField]
     private HpStatus hpStatus;
     public HpStatus HpStatus { get { return hpStatus; } }
+    [SerializeField]
     private int shield;
     public int Shield { get { return shield; } }
 
+    [SerializeField]
     private List<State> unitStates;
 
     //是否死亡
+    
     private bool isDeath;
     public bool IsDeath { get { return isDeath; } }
 

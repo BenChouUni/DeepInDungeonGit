@@ -6,8 +6,10 @@ using System;
 [Serializable]
 public class PlayerStatus:Unit
 {
+    [SerializeField]
     private int energy;
     public int Energy { get { return energy; } }
+    [SerializeField]
     private int coin;
     public int Coin { get { return coin; } }
     
@@ -25,7 +27,7 @@ public class PlayerStatus:Unit
     {
         
     }
-
+    
     public void EnergyMinus(int num)
     {
         if (num < 0)

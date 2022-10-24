@@ -20,7 +20,7 @@ public class Weapon:Card
     public int slotNumber;
 
 
-    
+    private int i;
 
     
     public Hand WeaponHand

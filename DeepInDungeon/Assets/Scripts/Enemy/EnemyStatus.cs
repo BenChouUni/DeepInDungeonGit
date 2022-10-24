@@ -16,22 +16,23 @@ public enum Species
 public class EnemyStatus:Unit
 {
     public int id;
+    [SerializeField]
     private int atk;
     //種族
     public Species species;
     public int speciesID;
     //部位
-    public List<Part> parts;
+    //public List<Part> parts;
     
 
 
-    public EnemyStatus(int _id,string _name,int _maxHealth,int _shield,int _atk,Species _species,int _speciesID,List<Part> _parts):base(_name,_maxHealth,_shield)
+    public EnemyStatus(int _id,string _name,int _maxHealth,int _shield,int _atk,Species _species,int _speciesID):base(_name,_maxHealth,_shield)
     {
         this.id = _id;
         this.atk = _atk;
         species = _species;
         speciesID = _speciesID;
-        parts = _parts;
+        
     }
 
     public static Species FindSpeciesByText(string str)

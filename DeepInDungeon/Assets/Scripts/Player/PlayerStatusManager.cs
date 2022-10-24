@@ -44,6 +44,7 @@ public class PlayerStatusManager : MonoSingleton<PlayerStatusManager>,IDataPersi
     {
  
         playerStatusDisplay.UpdatePlayerStatus(playerStatus);
+        energyDisplay.SetMaxEnergy(playerStatus.Energy);
        
     }
 }

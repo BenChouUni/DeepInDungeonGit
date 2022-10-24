@@ -6,7 +6,7 @@ using System.Linq;
 ///此為singleton
 /// </summary>
 
-public class DataPersistenceManager : MonoBehaviour
+public class DataPersistenceManager : MonoSingleton<DataPersistenceManager>
 {
     [Header("File Storage Config")]
 
@@ -91,11 +91,13 @@ public class DataPersistenceManager : MonoBehaviour
             Debug.Log("沒有可讀取資料，開始新遊戲");
             NewGame();
         }
+        /*
         if (this.gameData.playerStatus == null)
         {
             Debug.Log("生成初始玩家資料");
             this.gameData.playerStatus = new PlayerStatus();
         }
+        */
         foreach (IDataPersistence dataPersistenceObj in dataPersistencesObjects)
         {
             dataPersistenceObj.LoadData(this.gameData);

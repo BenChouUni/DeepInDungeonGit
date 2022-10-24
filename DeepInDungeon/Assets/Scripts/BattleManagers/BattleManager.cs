@@ -22,7 +22,8 @@ public class BattleManager : MonoSingleton<BattleManager>
     public PlayerStatusManager playerStatusManager;
     //acction manager
     public EnemyActionManager EnemyActionManager;
-    //
+    //data manager
+    public EnemyDataManager enemyDataManager;
     
     //輔助變量
     private Moves attackingMove;//準備發起攻擊的move
@@ -55,7 +56,7 @@ public class BattleManager : MonoSingleton<BattleManager>
         playerMovesDeckManager.ShuffleMoves();
 
         playerStatusManager.UpdateDisplay();
-        enemyStatusManager.UpdateDisplay();
+        enemyStatusManager.enemyStatusDisplay.InitialEnemyStatus(enemyDataManager.LoadCertainEnemy(0));
         
 
 

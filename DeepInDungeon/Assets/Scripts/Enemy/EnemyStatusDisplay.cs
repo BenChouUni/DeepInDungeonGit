@@ -22,6 +22,7 @@ public class EnemyStatusDisplay : MonoBehaviour
 
     public void UpdateEnemyStatus(EnemyStatus enemyStatus)
     {
+        //Debug.Log("EnemyStatusDisplay.UpdateEnemyStatus");
         Unit.UpdateUnitStatus(enemyStatus, healthBar, shieldText);
 
     }

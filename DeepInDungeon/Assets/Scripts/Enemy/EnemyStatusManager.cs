@@ -23,12 +23,14 @@ public class EnemyStatusManager : MonoSingleton<EnemyStatusManager>
     void Start()
     {
         
-        enemyStatusDisplay.UpdateEnemyStatus(enemyStatus);
+        //enemyStatusDisplay.UpdateEnemyStatus(enemyStatus);
+        //交給battle manager 
     }
 
 
     public void UpdateDisplay()
     {
+        Debug.Log("update enemy name:" + enemyStatus.Name);
         enemyStatusDisplay.UpdateEnemyStatus(enemyStatus);
     }
 
