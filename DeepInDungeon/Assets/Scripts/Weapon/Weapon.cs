@@ -31,7 +31,7 @@ public class Weapon:Card
     public Weapon(int _id, string _name, int _atk, int _def, int _slot, string _description, Hand _hand) : base(_id, _name, _description)
     {
         this.id = _id;
-        this.name = _name;
+        this.cardName = _name;
         this.Attack = _atk;
         this.Defense = _def;
         this.slotNumber = _slot;

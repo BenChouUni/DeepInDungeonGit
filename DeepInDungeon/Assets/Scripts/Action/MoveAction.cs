@@ -1,15 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 
-public class MoveAction:ScriptableObject,IAction
+[Serializable]
+public class MoveAction
 {
-    public string name;
-    public string description;
-
-    public virtual void Action()
+    [Serializable]
+    public class BaseAction
     {
-        
+        public int id;
+        public int parameter;
     }
+    [Serializable]
+    public class ApplyAction
+    {
+        public int stateID;
+        public int layer;
+    }
+    [Serializable]
+    public class GainAction
+    {
+        public int stateID;
+        public int layer;
+    }
+    /*
+    public List<BaseAction> baseActions;
+    public List<ApplyAction> applyActions;
+    public List<GainAction> gainActions;
+    */
 }

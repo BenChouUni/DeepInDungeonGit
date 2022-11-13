@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\DeckManager\WeaponPanelDropZone.cs" />
      <Compile Include="Assets\Scripts\BattleManagers\BattleCardManager.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyStatusManager.cs" />
+     <Compile Include="Assets\Scripts\BattleManagers\BattleActionManager.cs" />
      <Compile Include="Assets\Scripts\BaseClass\DropZone.cs" />
      <Compile Include="Assets\Scripts\DataPersistence\Data\PlayerData\PlayerWeapon.cs" />
      <Compile Include="Assets\Scripts\BattleManagers\EnemyActionManager.cs" />
@@ -72,9 +73,7 @@
      <Compile Include="Assets\Scripts\BaseClass\Part.cs" />
      <Compile Include="Assets\Scripts\BattleManagers\CommonAction.cs" />
      <Compile Include="Assets\Scripts\DeckManager\WeaponDropZone.cs" />
-     <Compile Include="Assets\Scripts\Action\AttackAction.cs" />
      <Compile Include="Assets\Scripts\DeckManager\WeaponDeckManager.cs" />
-     <Compile Include="Assets\Scripts\Action\DefenseAction.cs" />
      <Compile Include="Assets\Scripts\BaseClass\Unit\Unit.cs" />
      <Compile Include="Assets\Scripts\DataPersistence\Data\MovesData\MovesDataStore.cs" />
      <Compile Include="Assets\Scripts\DeckManager\MovesDeckManager.cs" />
@@ -90,6 +89,7 @@
      <Compile Include="Assets\Scripts\Player\PlayerStatusDisplay.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerStatus.cs" />
      <Compile Include="Assets\Scripts\DataPersistence\IDataPersistence.cs" />
+     <Compile Include="Assets\Scripts\Moves\MovesList.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerStatusManager.cs" />
      <Compile Include="Assets\Scripts\TargetArrow\Point.cs" />
      <Compile Include="Assets\Scripts\Weapon\WeaponDisplay.cs" />

@@ -34,7 +34,7 @@ public class PlayerMovesManager : MonoBehaviour, IDataPersistence
     {
         foreach (Moves move in moveList)
         {
-            Debug.Log("生成"+move.name);
+            Debug.Log("生成"+move.cardName);
             GameObject newMoves = GameObject.Instantiate(movesCardPrefab, new Vector3(0, 0, 0), Quaternion.identity);
             
             newMoves.transform.SetParent(MovesDeckPanel, false);

@@ -84,7 +84,7 @@ public class WeaponDropZone : DropZone, IDropHandler
                 we = child.gameObject.GetComponent<WeaponDisplay>().weapon;
                 
             }
-            Debug.Log(child.gameObject.GetComponent<WeaponDisplay>().weapon.name);
+            Debug.Log(child.gameObject.GetComponent<WeaponDisplay>().weapon.cardName);
         }
 
         if (we == null)

@@ -46,7 +46,7 @@ public class WeaponDeckManager : MonoBehaviour,IDataPersistence
                 {
                     TurnOnTheDroppable(true, secondaryWeaponZone);
                 }
-                Debug.Log("主手武器是" + value.name);
+                Debug.Log("主手武器是" + value.cardName);
                 mdManager.CreateMovesDeckByWeapon(value);
             }
 
@@ -73,7 +73,7 @@ public class WeaponDeckManager : MonoBehaviour,IDataPersistence
             }
             else
             {
-                Debug.Log("副手武器是" + value.name);
+                Debug.Log("副手武器是" + value.cardName);
                 mdManager.CreateMovesDeckByWeapon(value);
             }
             
@@ -195,10 +195,10 @@ public class WeaponDeckManager : MonoBehaviour,IDataPersistence
         foreach (Transform child in weaponPanel)
         {
             Weapon childWeapon = child.gameObject.GetComponent<WeaponDisplay>().weapon;
-            Debug.Log(childWeapon.name);
-            if (childWeapon.name == weapon.name)
+            Debug.Log(childWeapon.cardName);
+            if (childWeapon.cardName == weapon.cardName)
             {
-                Debug.Log("在武器庫找到" + childWeapon.name);
+                Debug.Log("在武器庫找到" + childWeapon.cardName);
                 return child.gameObject;
             }
        
@@ -239,11 +239,11 @@ public class WeaponDeckManager : MonoBehaviour,IDataPersistence
 
     public void RemoveWeaponOnHand(Weapon weapon)
     {
-        if (this.MainWeapon.name == weapon.name)
+        if (this.MainWeapon.cardName == weapon.cardName)
         {
             this.MainWeapon = null;
         }
-        else if(this.SecondaryWeapon.name == weapon.name)
+        else if(this.SecondaryWeapon.cardName == weapon.cardName)
         {
             this.SecondaryWeapon = null;
         }

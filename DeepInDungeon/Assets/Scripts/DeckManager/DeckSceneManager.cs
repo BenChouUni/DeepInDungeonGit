@@ -18,7 +18,7 @@ public class DeckSceneManager : MonoBehaviour
 
     public void ToBattleScene()
     {
-        if (weaponDeckManager.MainWeapon.name != null)
+        if (weaponDeckManager.MainWeapon.cardName != null)
         {
             SceneManager.LoadScene("BattleScene");
         }

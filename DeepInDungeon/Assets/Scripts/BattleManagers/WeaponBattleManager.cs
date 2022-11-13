@@ -47,11 +47,11 @@ public class WeaponBattleManager : MonoSingleton<WeaponBattleManager>,IDataPersi
     /// <returns></returns>
     public Weapon FindWeaponByName(string weaponName)
     {
-        if (playerWeapon.mainWeapon.name == weaponName)
+        if (playerWeapon.mainWeapon.cardName == weaponName)
         {
             return playerWeapon.mainWeapon;
         }
-        else if (playerWeapon.secondaryWeapon.name == weaponName)
+        else if (playerWeapon.secondaryWeapon.cardName == weaponName)
         {
             return playerWeapon.secondaryWeapon;
         }

@@ -80,7 +80,7 @@ public class MovesDeckManager : MonoBehaviour,IDataPersistence
             if (child.gameObject.GetComponent<MovesCardDisplay>() != null)
             {
                 Moves move = child.gameObject.GetComponent<MovesCardDisplay>().move;
-                if (move.weaponName == weapon.name)
+                if (move.weaponName == weapon.cardName)
                 {
                     playerMoveList.Remove(move);
                     Destroy(child);
@@ -157,7 +157,7 @@ public class MovesDeckManager : MonoBehaviour,IDataPersistence
         {
             Moves move = movesDataStore.FindMovesByIndex(MovesIndexList[i]);
             //避免引用重複
-            Moves newMove = new Moves(move.id, move.name, move.cardDescription, move.cost, move.aim, weapon.name);
+            Moves newMove = new Moves(move.id, move.cardName, move.cardDescription, move.cost, move.aim, weapon.cardName);
             //move.weaponName = weapon.name;//在此加入武器名
             list.Add(newMove);
         }

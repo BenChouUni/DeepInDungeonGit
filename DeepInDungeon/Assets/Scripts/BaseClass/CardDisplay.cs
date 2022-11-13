@@ -18,7 +18,7 @@ public class CardDisplay : MonoBehaviour
     {
 
 
-        nameText.text = this.card.name;
+        nameText.text = this.card.cardName;
        
         if (discriptiontText.text!=null)
         {
