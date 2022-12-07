@@ -11,7 +11,7 @@ public class CardDisplay : MonoBehaviour
 
     public Image Image;
 
-    public Card card;
+    public CardData card;
 
 
     public void ShowCard()

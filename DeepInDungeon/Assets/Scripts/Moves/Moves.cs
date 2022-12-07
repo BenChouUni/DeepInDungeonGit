@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [System.Serializable]
-public class Moves : Card,IAction
+public class Moves : CardData,IAction
 {
 
     public int cost;
@@ -42,13 +42,4 @@ public class Moves : Card,IAction
     {
         
     }
-}
-
-[CreateAssetMenu(fileName = "MyObject", menuName = "CreateMyObject/Move")]
-public class MoveCard:ScriptableObject
-{
-    public Moves move;
-    public List<MoveAction.BaseAction> baseActions;
-    public List<MoveAction.ApplyAction> applyActions;
-    public List<MoveAction.GainAction> gainActions;
 }

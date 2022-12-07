@@ -5,7 +5,7 @@ using UnityEngine;
 
 
 [System.Serializable]
-public class Weapon:Card
+public class Weapon:CardData
 {
     
     public enum Hand

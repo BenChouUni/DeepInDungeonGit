@@ -52,7 +52,6 @@
      <Compile Include="Assets\Scripts\BaseClass\Unit\HpStatus.cs" />
      <Compile Include="Assets\Scripts\HealthBar.cs" />
      <Compile Include="Assets\Scripts\Moves\Moves.cs" />
-     <Compile Include="Assets\Scripts\IAction.cs" />
      <Compile Include="Assets\Scripts\DeckManager\WeaponPanelDropZone.cs" />
      <Compile Include="Assets\Scripts\BattleManagers\BattleCardManager.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyStatusManager.cs" />
@@ -64,12 +63,12 @@
      <Compile Include="Assets\Scripts\BaseClass\ZoomUI.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyStatusDisplay.cs" />
      <Compile Include="Assets\Scripts\Weapon\Weapon.cs" />
+     <Compile Include="Assets\Scripts\BaseClass\Card.cs" />
      <Compile Include="Assets\Scripts\DataPersistence\Data\EnemyData\EnemyDataManager.cs" />
      <Compile Include="Assets\Scripts\BaseClass\CardDisplay.cs" />
      <Compile Include="Assets\Scripts\DeckManager\DeckButtonManager.cs" />
      <Compile Include="Assets\Scripts\DataPersistence\DataPersistenceManager.cs" />
-     <Compile Include="Assets\Scripts\Action\MoveAction.cs" />
-     <Compile Include="Assets\Scripts\BaseClass\Card.cs" />
+     <Compile Include="Assets\Scripts\BaseClass\CardData.cs" />
      <Compile Include="Assets\Scripts\BaseClass\Part.cs" />
      <Compile Include="Assets\Scripts\BattleManagers\CommonAction.cs" />
      <Compile Include="Assets\Scripts\DeckManager\WeaponDropZone.cs" />
@@ -99,6 +98,7 @@
      <Compile Include="Assets\Scripts\BaseClass\State.cs" />
      <Compile Include="Assets\Scripts\DataPersistence\Data\GameData.cs" />
      <Compile Include="Assets\Scripts\BattleManagers\OrderHandCard.cs" />
+     <Compile Include="Assets\Scripts\BaseClass\CardEffect.cs" />
      <Compile Include="Assets\Scripts\Singleton\MonoSingleton.cs" />
      <Compile Include="Assets\Scripts\DeckManager\DeckSceneManager.cs" />
  <Reference Include="UnityEngine">

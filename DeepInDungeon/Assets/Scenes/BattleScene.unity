@@ -251,6 +251,7 @@ MonoBehaviour:
   enemyStatusManager: {fileID: 447634022}
   playerStatusManager: {fileID: 904749046}
   EnemyActionManager: {fileID: 1081797060}
+  enemyDataManager: {fileID: 1326288358}
   drawNumber: 5
 --- !u!1 &6681893
 GameObject:
@@ -895,7 +896,7 @@ MonoBehaviour:
   playerWeapon:
     mainWeapon:
       id: 0
-      name: 
+      cardName: 
       cardDescription: 
       hand: 0
       Attack: 0
@@ -903,7 +904,7 @@ MonoBehaviour:
       slotNumber: 0
     secondaryWeapon:
       id: 0
-      name: 
+      cardName: 
       cardDescription: 
       hand: 0
       Attack: 0
@@ -1291,7 +1292,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 878494962}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &447634022
 MonoBehaviour:
@@ -1305,10 +1306,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5a7b28c5117f4524b8971fa91cc28dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyStatus: {fileID: 0}
+  enemyStatus:
+    unitName: 
+    hpStatus:
+      hp: 0
+      hpMax: 0
+    shield: 0
+    unitStates: []
+    id: 0
+    atk: 0
+    species: 0
+    speciesID: 0
   healthBar: {fileID: 1373154650}
   enemyName: {fileID: 190825612}
-  enemyStatusDisplay: {fileID: 0}
+  enemyStatusDisplay: {fileID: 447634023}
 --- !u!114 &447634023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1923,8 +1934,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 904749044}
-  - {fileID: 447634021}
   - {fileID: 1649000601}
+  - {fileID: 447634021}
   - {fileID: 253821513}
   - {fileID: 206018731}
   - {fileID: 5535640}
@@ -1977,7 +1988,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86428db5e0c614d5aa3fc7acc6115833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStatus: {fileID: 0}
+  playerStatus:
+    unitName: "\u7121\u540D\u6C0F"
+    hpStatus:
+      hp: 100
+      hpMax: 100
+    shield: 0
+    unitStates: []
+    energy: 3
+    coin: 50
   playerName:
   - {fileID: 1600790894}
   healthBar: {fileID: 1057556347}
@@ -1995,7 +2014,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb4636dc162145acb2d861df48eaca4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStatus: {fileID: 0}
+  playerStatus:
+    unitName: "\u7121\u540D\u6C0F"
+    hpStatus:
+      hp: 100
+      hpMax: 100
+    shield: 0
+    unitStates: []
+    energy: 3
+    coin: 50
   energyDisplay: {fileID: 632034691}
   playerStatusDisplay: {fileID: 0}
 --- !u!1 &910781793
@@ -2426,7 +2453,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b8b5120d749b4bee94871f24c6214a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
+  enemy:
+    unitName: 
+    hpStatus:
+      hp: 0
+      hpMax: 0
+    shield: 0
+    unitStates: []
+    id: 0
+    atk: 0
+    species: 0
+    speciesID: 0
   actionShow: {fileID: 0}
   actionIcon: {fileID: 0}
 --- !u!1 &1097193218
@@ -2685,8 +2722,6 @@ MonoBehaviour:
   EnemyList: {fileID: 4900000, guid: 5e3d1ea469c8c4014b5fbdbf03e9cc21, type: 3}
   FindSpeciesParts: {fileID: 4900000, guid: 6099863cf0091483daba2fcd2b614999, type: 3}
   TreesPartsList: {fileID: 4900000, guid: a37db5f1c86e64435b84e52e41c0b75c, type: 3}
-  enemyStatusManager: {fileID: 447634022}
-  enemy: {fileID: 0}
 --- !u!1 &1345530089
 GameObject:
   m_ObjectHideFlags: 0
@@ -3272,7 +3307,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 878494962}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1649000602
 MonoBehaviour:

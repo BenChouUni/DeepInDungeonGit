@@ -1,56 +1,36 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BattleManagers/WeaponBattleManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BattleManagers/CommonAction.cs">
     <Files>
-      <File FileName="Assets/Scripts/BattleManagers/WeaponBattleManager.cs" Line="58" Column="1" />
-      <File FileName="Assets/Scripts/DataPersistence/Data/MovesData/MovesDataStore.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Moves/Moves.cs" Line="51" Column="20" />
-      <File FileName="Assets/Data/CardByWeapon.csv" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BattleManagers/BattleManager.cs" Line="39" Column="21" />
-      <File FileName="Assets/Scripts/BattleManagers/OrderHandCard.cs" Line="15" Column="1" />
-      <File FileName="Assets/Scripts/Moves/CheckHandCard.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/DataPersistence/Data/EnemyData/EnemyDatamanager.cs" Line="7" Column="30" />
-      <File FileName="Assets/Scripts/Draggable.cs" Line="7" Column="19" />
-      <File FileName="Assets/Scripts/BattleManagers/EnemyActionManager.cs" Line="9" Column="23" />
-      <File FileName="Assets/Scripts/healthBar.cs" Line="11" Column="1" />
-      <File FileName="Assets/Scripts/BaseClass/Card.cs" Line="6" Column="18" />
-      <File FileName="Assets/Scripts/BattleManagers/BattleMoveCard.cs" Line="34" Column="49" />
-      <File FileName="Assets/Scripts/BaseClass/Part.cs" Line="32" Column="27" />
-      <File FileName="Assets/Scripts/BattleManagers/CommonAction.cs" Line="10" Column="8" />
-      <File FileName="Assets/Scripts/Player/PlayerStatusDisplay.cs" Line="37" Column="6" />
-      <File FileName="Assets/Scripts/Player/PlayerStatus.cs" Line="24" Column="41" />
-      <File FileName="Assets/Scripts/DataPersistence/Data/GameData.cs" Line="22" Column="1" />
-      <File FileName="Assets/Scripts/BaseClass/Unit/Unit.cs" Line="13" Column="21" />
-      <File FileName="Assets/Scripts/BaseClass/Unit/HpStatus.cs" Line="5" Column="1" />
-      <File FileName="Assets/Scripts/Action/MoveAction.cs" Line="22" Column="19" />
+      <File FileName="Assets/Scripts/BattleManagers/CommonAction.cs" Line="1" Column="1" IsPinned="True" />
+      <File FileName="Assets/Scripts/BattleManagers/WeaponBattleManager.cs" />
+      <File FileName="Assets/Scripts/DataPersistence/Data/MovesData/MovesDataStore.cs" />
+      <File FileName="Assets/Scripts/Moves/Moves.cs" Line="7" Column="27" />
+      <File FileName="Assets/Data/CardByWeapon.csv" />
+      <File FileName="Assets/Scripts/BattleManagers/BattleManager.cs" />
+      <File FileName="Assets/Scripts/BattleManagers/OrderHandCard.cs" />
+      <File FileName="Assets/Scripts/Moves/CheckHandCard.cs" />
+      <File FileName="Assets/Scripts/DataPersistence/Data/EnemyData/EnemyDatamanager.cs" />
+      <File FileName="Assets/Scripts/Draggable.cs" />
+      <File FileName="Assets/Scripts/BattleManagers/EnemyActionManager.cs" />
+      <File FileName="Assets/Scripts/healthBar.cs" />
+      <File FileName="Assets/Scripts/BaseClass/Card.cs" Line="12" Column="1" />
+      <File FileName="Assets/Scripts/BattleManagers/BattleMoveCard.cs" />
+      <File FileName="Assets/Scripts/BaseClass/Part.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player/PlayerStatusDisplay.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player/PlayerStatus.cs" />
+      <File FileName="Assets/Scripts/DataPersistence/Data/GameData.cs" />
+      <File FileName="Assets/Scripts/BaseClass/Unit/Unit.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BaseClass/Unit/HpStatus.cs" />
+      <File FileName="Assets/Scripts/Enemy/EnemyStatusDisplay.cs" />
+      <File FileName="Assets/Scripts/Enemy/EnemyStatusManager.cs" />
+      <File FileName="Assets/Scripts/BattleManagers/BattleCardManager.cs" Line="104" Column="47" />
+      <File FileName="Assets/Scripts/Weapon/Weapon.cs" Line="8" Column="29" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="DeepInDungeon" expanded="True">
-            <Node name="Assembly-CSharp" expanded="True">
-              <Node name="Assets" expanded="True">
-                <Node name="Scripts" expanded="True">
-                  <Node name="Action" expanded="True" />
-                  <Node name="BaseClass" expanded="True" />
-                  <Node name="BattleManagers" expanded="True">
-                    <Node name="WeaponBattleManager.cs" selected="True" />
-                  </Node>
-                  <Node name="Moves" expanded="True" />
-                </Node>
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
